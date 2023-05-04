@@ -1,0 +1,22 @@
+.header-nav {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background: #000000;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-nav-list {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+.header-nav-item {
+    padding-right: 40px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #B7B7B7;
+    
+}
