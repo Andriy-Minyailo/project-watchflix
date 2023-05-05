@@ -1,16 +1,17 @@
-.footer {
+.container {
     display: flex;
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
 }
+
 .footer-text {
     margin-right: 10px;
-    color: getColor ('secondaryText');
+    color: #B7B7B7;
 }
 .footer-img {
     margin-right: 10px;
 }
 .footer-link {
-    color: getColor ('secondaryText');
+    color: #B7B7B7;
 }

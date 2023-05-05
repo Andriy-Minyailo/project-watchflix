@@ -1,11 +1,25 @@
+
 .header-nav {
     display: flex;
     align-items: center;
     height: 60px;
-    background-color: getColor ('backgroundSecondary');
+    background: #000000;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
+    @media screen and (min-width: 480px) {
+        width: 480px;
+        display: block;
+      }
+      @media screen and (min-width: 768px) {
+        width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 1200px;
+      }
 }
+
 .header-nav-list {
     display: flex;
     margin-right: auto;
@@ -19,8 +33,9 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
-    color: getColor ('secondaryText');
+    color: #B7B7B7;
 }
 .toggel-btn {
     margin-right: 32px;
+    color: rgb(255, 98, 0);
 }
