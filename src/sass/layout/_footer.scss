@@ -1,8 +1,22 @@
-.container {
+.footer {
     display: flex;
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
+    @media screen and (min-width: 480px) {
+        width: 480px;
+        display: inline;
+      }
+    
+      @media screen and (min-width: 768px) {
+        width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+    
+      @media screen and (min-width: 1200px) {
+        width: 1200px;
+      }
 }
 
 .footer-text {
@@ -14,4 +28,6 @@
 }
 .footer-link {
     color: #B7B7B7;
+    text-decoration: none;
+    color: inherit;
 }
