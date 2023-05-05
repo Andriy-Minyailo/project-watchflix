@@ -1,12 +1,12 @@
 .footer {
-  display: flex;
+  // display: flex;
   // align-items: flex-end;
   // justify-content: center;
   flex-wrap: nowrap;
     // margin-right: auto;
     // margin-left: auto;
     @media screen and (min-width: 480px) {
-        width: 480px;
+        width: 300px;
         // display: inline;
       }
     
@@ -24,9 +24,9 @@
 }
 
 .footer-text {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  // display: flex;
+  // justify-content: flex-end;
+  // align-items: flex-end;
   margin-right: 10px;
   color: #B7B7B7;
 
@@ -37,6 +37,6 @@
 }
 .footer-link {
   color: #B7B7B7;
-  text-decoration: none;
-  color: inherit;
+  text-decoration: underline;
+
 }
