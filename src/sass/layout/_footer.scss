@@ -1,8 +1,9 @@
 .footer {
-    display: flex;
-    justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+    // margin-right: auto;
+    // margin-left: auto;
     @media screen and (min-width: 480px) {
         width: 480px;
         display: inline;
@@ -12,6 +13,8 @@
         width: 768px;
         padding-left: 32px;
         padding-right: 32px;
+        display: flex;
+        justify-content: center;
       }
     
       @media screen and (min-width: 1200px) {
