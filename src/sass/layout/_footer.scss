@@ -1,12 +1,13 @@
 .footer {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  // align-items: flex-end;
+  // justify-content: center;
+  flex-wrap: nowrap;
     // margin-right: auto;
     // margin-left: auto;
     @media screen and (min-width: 480px) {
         width: 480px;
-        display: inline;
+        // display: inline;
       }
     
       @media screen and (min-width: 768px) {
@@ -23,14 +24,19 @@
 }
 
 .footer-text {
-    margin-right: 10px;
-    color: #B7B7B7;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 10px;
+  color: #B7B7B7;
+
+
 }
 .footer-img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 .footer-link {
-    color: #B7B7B7;
-    text-decoration: none;
-    color: inherit;
+  color: #B7B7B7;
+  text-decoration: none;
+  color: inherit;
 }

@@ -8,7 +8,7 @@ toggleThemeBtn.addEventListener('click', () => {
     localStorage.theme = 'dark'
    } else {
     document.body.classList.add('light')
-    toggleThemeImage.use = '../images/symbol-defs.svg#icon-moon'
+   //  toggleThemeImage.use = '../images/symbol-defs.svg#icon-moon'
     localStorage.theme = 'light'
    }
 })
