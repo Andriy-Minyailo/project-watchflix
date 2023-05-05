@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: flex-end;
       
-      @media screen and (min-width: 768px) {
+      @include tablet {
         width: 768px;
         padding-left: 32px;
         padding-right: 32px;
@@ -10,8 +10,8 @@
         justify-content: center;
       }
     
-      @media screen and (min-width: 1200px) {
-        width: 1200px;
+      @include desktop{
+        width: 1280px;
       }
 }
 
@@ -21,12 +21,12 @@
   // align-items: flex-end;
   margin-right: 10px;
   color: #B7B7B7;
-  @media screen and (min-width: 480px) {
+  @include tel {
     width: 320px;
     font-size: 14px;
     line-height: 16px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 768px;
     padding-left: 32px;
     padding-right: 32px;
@@ -42,12 +42,12 @@
 .footer-link {
   color: #B7B7B7;
   text-decoration: underline;
-  @media screen and (min-width: 480px) {
+  @include tel {
     width: 320px;
     font-size: 14px;
     line-height: 16px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 768px;
     padding-left: 32px;
     padding-right: 32px;

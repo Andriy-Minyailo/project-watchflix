@@ -1,32 +1,57 @@
-<header class="container">
-    <nav class="header-nav">
-        <!-- <div>
+<div class="container">
+  <nav class="header-nav">
+    <!-- <div>
             <a href="./index.html" class="logo link">
                 <svg width="48" height="48">
                     <use href=""></use></svg><span class="name">Cinemania</span></a>
         </div> -->
-        
-        <ul class="header-nav-list">
-            <li class="header-nav-item"><a href="./index.html" class="header-link">HOME</a></li>
-            <li class="header-nav-item"><a href="./catalog.html" class="header-link">CATALOG</a></li>
-            <li class="header-nav-item"><a href="./myLibrary.html" class="header-link">MY LIBRARY</a></li>
-        </ul>
-        <button id="toggel-btn" class="toggel-btn" width="60" height="24">X</button>
-    </nav>
 
+    <ul class="header-nav-list">
+      <li class="header-nav-item">
+        <a href="./index.html" class="header-link">HOME</a>
+      </li>
+      <li class="header-nav-item">
+        <a href="./catalog.html" class="header-link">CATALOG</a>
+      </li>
+      <li class="header-nav-item">
+        <a href="./myLibrary.html" class="header-link">MY LIBRARY</a>
+      </li>
+    </ul>
+    <button id="toggel-btn" class="toggel-btn" width="60" height="24">X</button>
+  </nav>
 
+  <button
+    type="button"
+    class="page-header__menu-btn js-open-menu"
+    aria-label="перемикач мобільного меню"
+  >
+    <!-- MENU -->
+  </button>
 
-    <button type="button" class="page-header__menu-btn js-open-menu" aria-label="перемикач мобільного меню">MENU</button>
+  <div class="mob-menu js-menu-container">
+    <button
+      class="mob-menu-svg js-close-menu"
+      aria-label="перемикач мобільного меню"
+    >
+      XX
+    </button>
 
-    <div class="mob-menu js-menu-container">
-        <button class="mob-menu-svg js-close-menu" aria-label="перемикач мобільного меню">XX</button>
-    
-        <div class="mob-menu-container container">
-          <ul class="mob-menu__list">
-              <li class="mob-menu__list__item"><a href="./index.html" class="mob-menu__list__link current link">HOME</a></li>
-              <li class="mob-menu__list__item"><a href="./catalog.html" class="mob-menu__list__link link">CATALOG</a></li>
-              <li class="mob-menu__list__item"><a href="./myLibrary.html" class="mob-menu__list__link link">MY LIBRARY</a></li>
-          </ul>
-        </div>
+    <div class="mob-menu-container">
+      <ul class="mob-menu__list">
+        <li class="mob-menu__list__item">
+          <a href="./index.html" class="mob-menu__list__link current link"
+            >HOME</a
+          >
+        </li>
+        <li class="mob-menu__list__item">
+          <a href="./catalog.html" class="mob-menu__list__link link">CATALOG</a>
+        </li>
+        <li class="mob-menu__list__item">
+          <a href="./myLibrary.html" class="mob-menu__list__link link"
+            >MY LIBRARY</a
+          >
+        </li>
+      </ul>
     </div>
-</header>
+  </div>
+</div>
