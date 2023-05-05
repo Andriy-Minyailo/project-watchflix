@@ -13,10 +13,14 @@
 }
 .header-nav-item {
     padding-right: 40px;
-    font-family: 'Roboto';
+     
+}
+.header-link {
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
-    color: getColor ('grey');
-    
+    color: getColor ('secondaryText');
+}
+.toggel-btn {
+    margin-right: 32px;
 }
