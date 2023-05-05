@@ -1,19 +1,24 @@
 
 .header-nav {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    background: #000000;
+  width: 320px;
+  height: 48px;
+  display: block;
+    
+    // background: #000000;
     margin-left: auto;
     margin-right: auto; 
     @media screen and (min-width: 480px) {
         width: 480px;
-        display: block;
+        height: 48px;
+       
       }
       @media screen and (min-width: 768px) {
         width: 768px;
         padding-left: 32px;
         padding-right: 32px;
+        height: 60px;
+        display: flex;
+        align-items: center;
       }
       @media screen and (min-width: 1200px) {
         width: 1200px;
@@ -41,4 +46,19 @@
 .toggel-btn {
     margin-right: 32px;
     color: rgb(255, 98, 0);
+}
+
+
+.header-menu {
+  font-size: 14px;
+  line-height: 16px;
+  color: #B7B7B7;
+  text-decoration: none;
+}
+.mob-menu-item {
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  color: inherit;
 }
