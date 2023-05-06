@@ -1,17 +1,16 @@
 
 .header-nav {
-  // width: 320px;
   height: 48px;
-  display: block;
-    
-    // background: #000000;
-    margin-left: auto;
-    margin-right: auto; 
-    @include tel {
-        // width: 320px;
-        height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+    // @include tel {
+     
+    //   height: 48px;
        
-      }
+    //   }
+
       @include tablet {
         // width: 768px;
         padding-left: 32px;
@@ -24,11 +23,42 @@
         // width: 1280px;
       }
 }
+.header-logo {
+  display: flex;
+  margin-left: 20px;
+
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  
+   
+}
+.name {
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  @include tel {
+    // width: 320px;
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+   }
+   @include tablet {
+    // width: 768px;
+  display: block;
+  }
+}
 
 .header-nav-list {
-    display: flex;
+    display: none;
     margin-right: auto;
     margin-left: auto;
+    @include tablet {
+      // width: 768px;
+    display: flex;
+    }
 }
 .header-nav-item {
     padding-right: 40px;
@@ -39,26 +69,41 @@
     font-size: 14px;
     line-height: 16px;
     color: #B7B7B7;
-    text-decoration: none;
-    color: inherit;
+  
+ 
 }
 
 .toggel-btn {
-    margin-right: 32px;
+    margin-right: 20px;
     color: rgb(255, 98, 0);
 }
+
 
 
 .header-menu {
   font-size: 14px;
   line-height: 16px;
   color: #B7B7B7;
-  text-decoration: none;
+  border: none;
+  background: inherit;
+
+}
+.mob-menu-container {
+padding-left: 20px;
+padding-top: 20px;
+
 }
 .mob-menu-item {
   font-size: 14px;
   line-height: 16px;
   color: #FFFFFF;
-  text-decoration: none;
   color: inherit;
+}
+.mob-menu-svg {
+  border: none;
+  text-decoration: none;
+  background: inherit;
+}
+.mob-menu-link {
+  color: #B7B7B7;
 }
