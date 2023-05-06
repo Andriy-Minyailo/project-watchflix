@@ -1,0 +1,232 @@
+// Далее можно использовать миксины в вашем SCSS коде
+
+// Использование миксина "tel"
+@include tel {
+  .my-library__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    width: 235px;
+    height: 76px;
+
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .my-library__description {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    width: 249px;
+    height: 112px;
+
+    color: #f8f8f8;
+
+    padding-left: 20px;
+  }
+
+  .my-library__container {
+    background-image: linear-gradient(
+        83.48deg,
+        #0e0e0e 25.78%,
+        rgba(14, 14, 14, 0) 60.07%
+      ),
+      url('/src/img/upgrade/chairsmobile.jpg');
+    min-width: 320px;
+    min-height: 380px;
+
+    @include retina {
+      background-image: linear-gradient(
+          83.48deg,
+          #0e0e0e 25.78%,
+          rgba(14, 14, 14, 0) 60.07%
+        ),
+        url('/src/img/upgrade/chairsmobileretina.jpg');
+    }
+  }
+}
+
+.my-library__container {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.my-library__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include tel {
+    transform: translateY(40px);
+  }
+
+  @include tablet {
+    transform: translateY(70px);
+  }
+
+  @include desktop {
+    transform: translateY(170px);
+    transform: translateX(-117px);
+    left: 117px;
+    position: relative;
+  }
+}
+
+// Использование миксина "tablet"
+@include tablet {
+  .my-library__title {
+    width: 332px;
+    height: 104px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 52px;
+    display: flex;
+    align-items: center;
+
+    /* White */
+
+    color: #ffffff;
+
+    margin-bottom: 23px;
+  }
+
+  .my-library__description {
+    width: 357px;
+    height: 80px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    /* Secondary text */
+
+    color: #f8f8f8;
+  }
+
+  .my-library__container {
+    background-image: linear-gradient(
+        83.48deg,
+        #0e0e0e 25.78%,
+        rgba(14, 14, 14, 0) 60.07%
+      ),
+      url('/src/img/upgrade/chairstablet.jpg');
+    min-width: 768px;
+    min-height: 372px;
+
+    @include retina {
+      background-image: linear-gradient(
+          83.48deg,
+          #0e0e0e 25.78%,
+          rgba(14, 14, 14, 0) 60.07%
+        ),
+        url('/src/img/upgrade/chairstabletretina.jpg');
+    }
+  }
+}
+
+// Использование миксина "desktop"
+@include desktop {
+  .my-library__title {
+    width: 464px;
+    height: 150px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+
+    color: #ffffff;
+
+    margin-bottom: 37px;
+  }
+
+  .my-library__description {
+    width: 464px;
+    height: 76px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+
+    color: #f8f8f8;
+  }
+
+  .my-library__container {
+    background-image: linear-gradient(
+        83.48deg,
+        #0e0e0e 25.78%,
+        rgba(14, 14, 14, 0) 60.07%
+      ),
+      url('/src/img/upgrade/chairsdesktop.jpg');
+    min-width: 1280px;
+    min-height: 720px;
+
+    @include retina {
+      background-image: linear-gradient(
+          83.48deg,
+          #0e0e0e 25.78%,
+          rgba(14, 14, 14, 0) 60.07%
+        ),
+        url('/src/img/upgrade/chairsdesktopretina.jpg');
+    }
+  }
+}
+
+// not found
+
+.not-found__container {
+  background-color: #111111;
+
+  @include tel {
+    min-height: 332px;
+    min-width: 330px;
+  }
+}
+
+.search-movie-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 74px;
+
+  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #e62e00;
+  }
+
+  @include tel {
+
+  }
+}
+
