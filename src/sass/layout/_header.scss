@@ -39,15 +39,13 @@
   line-height: 28px;
   color: #FFFFFF;
   @include tel {
-    // width: 320px;
     display: none;
+  }
+   @include tablet {
+    display: block;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 8px;
-   }
-   @include tablet {
-    // width: 768px;
-  display: block;
   }
 }
 
@@ -86,7 +84,9 @@
   color: #B7B7B7;
   border: none;
   background: inherit;
-
+    @include tablet {
+      display: none;
+    }
 }
 .mob-menu-container {
 padding-left: 20px;
@@ -98,11 +98,12 @@ padding-top: 20px;
   line-height: 16px;
   color: #FFFFFF;
   color: inherit;
+  padding-bottom: 24px;
 }
 .mob-menu-svg {
   border: none;
-  text-decoration: none;
   background: inherit;
+  padding-bottom: 40px;
 }
 .mob-menu-link {
   color: #B7B7B7;
