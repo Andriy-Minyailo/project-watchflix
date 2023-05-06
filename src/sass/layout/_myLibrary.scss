@@ -204,29 +204,106 @@
     min-height: 332px;
     min-width: 330px;
   }
+
+  position: relative;
 }
 
 .search-movie-btn {
+  position: absolute;
+  top: 60%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
 
   gap: 10px;
   padding: 12px 24px;
   border-radius: 74px;
 
   background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
-  
+  box-shadow: none;
+
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 
-  &:hover {
-    background-color: #e62e00;
+  @include tablet {
+    max-width: 133px;
+    max-height: 40px;
   }
 
-  @include tel {
+  @include desktop {
+    max-width: 158px;
+    max-height: 52px;
+    padding: 12px 24px;
 
   }
 }
 
+.search-movie-btn__text {
+  width: 73px;
+  height: 14px;
+
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  box-shadow: none;
+
+  color: #111111;
+
+  @include tablet {
+    width: 85px;
+    font-size: 14px;
+    line-height: 16px;
+
+    white-space: nowrap;
+  }
+
+  @include desktop {
+    width: 110px;
+    font-size: 18px;
+    line-height: 28px;
+    white-space: nowrap;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+.not-found__text-li {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* or 140% */
+
+  text-align: center;
+
+  color: #ffffff;
+  width: 280px;
+
+  @include tablet {
+    width: 438px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @include desktop {
+    width: 584px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.not-found__text {
+  display: flex;
+  justify-content: center;
+}
+
+.not-found__text-ul {
+  transform: translateY(40px);
+}
