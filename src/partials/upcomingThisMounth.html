@@ -1,0 +1,79 @@
+<section class="upcoming">
+  <div class="container">
+    <h2 class="upcoming__title">Upcoming this month</h2>
+    <div class="upcoming__body">
+      <p id="upcoming-loading-message" class="upcoming__status-message">
+        Loading...
+      </p>
+      <p
+        id="upcoming-no-data-message"
+        class="upcoming__status-message upcoming__status-message--hidden"
+      >
+        No data found
+      </p>
+      <p
+        id="upcoming-error-message"
+        class="upcoming__status-message upcoming__status-message--hidden"
+      >
+        Something went wrong. Please try again later
+      </p>
+      <div id="upcoming-movie" class="upcoming__movie upcoming__movie--hidden">
+        <img
+          id="upcoming-movie-backdrop"
+          class="upcoming__movie-backdrop"
+          src="#"
+          alt=""
+        />
+        <div class="upcoming__movie-info">
+          <h3 id="upcoming-movie-title" class="upcoming__movie-title"></h3>
+          <ul class="upcoming__movie-stats">
+            <li
+              class="upcoming__movie-stats-item upcoming__movie-stats-item--release"
+            >
+              <p class="upcoming__movie-stats-label">Release date:</p>
+              <p
+                id="upcoming-movie-release-date"
+                class="upcoming__movie-stats-value"
+              ></p>
+            </li>
+            <li
+              class="upcoming__movie-stats-item upcoming__movie-stats-item--vote"
+            >
+              <p class="upcoming__movie-stats-label">Vote / Votes:</p>
+              <div class="upcoming__movie-stats-value">
+                <p id="upcoming-vote-average" class="upcoming__movie-vote"></p>
+                <span class="upcoming__movie-vote-divider">/</span>
+                <p id="upcoming-vote-count" class="upcoming__movie-vote"></p>
+              </div>
+            </li>
+            <li
+              class="upcoming__movie-stats-item upcoming__movie-stats-item--popularity"
+            >
+              <p class="upcoming__movie-stats-label">Popularity:</p>
+              <p
+                id="upcoming-movie-popularity"
+                class="upcoming__movie-stats-value"
+              ></p>
+            </li>
+            <li
+              class="upcoming__movie-stats-item upcoming__movie-stats-item--genre"
+            >
+              <p class="upcoming__movie-stats-label">Genre:</p>
+              <p
+                id="upcoming-movie-genre"
+                class="upcoming__movie-stats-value"
+              ></p>
+            </li>
+          </ul>
+
+          <div class="upcoming__movie-about">
+            <h4 class="upcoming__movie-about-title">About</h4>
+            <p id="upcoming-movie-about" class="upcoming__movie-about-text"></p>
+          </div>
+
+          <button id="upcoming-remind-btn" type="button">Remind me</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
