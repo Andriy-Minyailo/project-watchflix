@@ -1,3 +1,148 @@
 #hero {
-  height: 720px;
+  display: flex;
+  // height: 720px;
+  // background-image: url(../img/upgrade/desktop.jpg);
+}
+
+.hero__backgr {
+  justify-content: end;
+  position: relative;
+  width: 100%;
+  height: 380px;
+
+  @include tablet {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 432px;
+  }
+
+  @include desktop {
+    height: 720px;
+  }
+}
+
+.hero__img{
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  
+  @include tablet {
+      width: 482px;
+      height: 432px;
+    }
+
+   @include desktop {
+     height: 720px;
+     width: 802px;
+   }
+}
+
+.hero__discription {  
+  position: absolute;
+  z-index: 10;
+  width: 200px;
+  height: 380px;
+  background: linear-gradient(87.8deg, #0E0E0E 15.61%, rgba(14, 14, 14, 0) 60.39%);
+
+  @include tablet {
+    background-image: url(../img/upgrade/fronttablet.png);
+    background-size: cover;
+    width: 705px;
+    height: 432px;
+    z-index: 10;
+    }
+
+  @include desktop {
+    background-image: url(../img/upgrade/frontdesktop.png);
+    background-size: cover;
+    height: 721px;
+    width: 1217px;
+  }
+}
+
+.hero__title{
+  margin-left: 20px;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  align-items: center;  
+  color: #FFFFFF;
+
+  @include tablet{
+    width: 265px;
+    font-size: 32px;
+  }
+
+  @include desktop {
+    margin-left: 124px;
+    margin-top: 118px;
+    margin-bottom: 16px;
+    width: 375px;
+    font-size: 64px;
+  }
+}
+
+.hero__rating{
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+  @include desktop {
+      margin-left: 124px;
+      margin-bottom: 28px;
+      width: 367px;
+      font-size: 16px;
+    }
+}
+
+.hero__text{
+  margin-left: 20px;
+  margin-bottom: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.14;
+  display: flex;
+  color: #F8F8F8;
+
+  @include tablet {
+    width: 290px;
+    margin-bottom: 28px;
+  }
+
+  @include desktop {
+    margin-left: 124px;
+    margin-bottom: 36px;
+    width: 367px;
+    font-size: 16px;
+  }
+}
+
+.hero__btn {
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+  @include tablet {
+      margin-bottom: 32px;
+    }
+
+  @include desktop {
+      margin-left: 124px;
+      margin-bottom: 40px;
+    }
+}
+
+.hero__slider {
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+  @include desktop {
+    margin-left: 124px;
+  }
 }
