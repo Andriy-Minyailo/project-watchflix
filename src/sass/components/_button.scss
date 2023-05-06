@@ -1,0 +1,564 @@
+//        Розмітка index.html для перевірки
+//
+//       <div style="margin: 15px"><button type="button" class="load-more-dark-theme">Load more</button></div>
+//       <div style="margin: 15px"><button type="button" class="search-movie-dark-theme">Search movie</button></div>
+//       <div style="margin: 15px"><button type="button" class="watch-trailer-dark-theme">Watch trailer</button></div>
+//       <div style="margin: 15px"><button type="button" class="remind-me-dark-theme">Remind me</button></div>
+//       <div style="margin: 15px"><button type="button" class="remove-from-my-library-black-btn-dark-theme">Remove from my library</button></div>
+//       
+//       <div style="margin: 15px"><button type="button" class="add-to-my-library-black-btn-dark-theme">Add to my library</button></div>
+//       
+//       <div style="margin: 15px"><button type="button" class="load-more-light-theme">Load more</button></div>
+//       <div style="margin: 15px"><button type="button" class="search-movie-light-theme">Search movie</button></div>
+//       <div style="margin: 15px"><button type="button" class="watch-trailer-light-theme">Watch trailer</button></div>
+//       <div style="margin: 15px"><button type="button" class="remind-me-light-theme">Remind me</button></div>
+//       
+//       <div style="margin: 15px"><button type="button" class="remove-from-my-library-white-btn-light-theme">Remove from my library</button></div>
+//       
+//       <div style="margin: 15px"><button type="button" class="add-to-my-library-white-btn-light-theme">Add to my library</button></div>
+//       <div style="margin: 15px"><button type="button" class="search-white-magnifier-dark-theme"></button></div>
+//       <div style="margin: 15px"><button type="button" class="search-black-magnifier-light-theme"></button></div>
+
+.load-more-dark-theme {
+    background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  
+    height: 38px;
+    min-width: 106px;
+    left: 107px;
+    top: 4274px;
+    border: none;
+    border-radius: 74px;
+    padding: 12px 24px 12px 24px;
+    text-align: center;
+  
+    @include font(12px, 500, 14px, 0em);
+  
+    @media screen and (min-width: 768px) {
+      height: 40px;
+      min-width: 115px;
+      left: 326px;
+      top: 1595px;
+  
+      @include font(14px, 500, 16px, 0em);
+    }
+  
+    @media screen and (min-width: 1280px) {
+      height: 52px;
+      min-width: 134px;
+      left: 120px;
+      top: 907px;
+  
+      @include font(16px, 500, 24px, 0em);
+    }
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgb(62, 62, 62);
+    }
+  }
+  
+  .search-movie-dark-theme {
+    background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  
+    height: 38px;
+    min-width: 121px;
+    left: 99px;
+    top: 612px;
+    border: none;
+    border-radius: 74px;
+    padding: 12px 24px 12px 24px;
+    text-align: center;
+  
+    @include font(12px, 500, 14px, 0em);
+  
+    @media screen and (min-width: 768px) {
+      height: 40px;
+      min-width: 133px;
+      left: 317px;
+      top: 640px;
+  
+      @include font(14px, 500, 16px, 0em);
+    }
+  
+    @media screen and (min-width: 1280px) {
+      height: 52px;
+      min-width: 158px;
+      left: 561px;
+      top: 1032px;
+  
+      @include font(18px, 500, 28px, 0em);
+    }
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgb(62, 62, 62);
+    }
+  }
+  
+  .watch-trailer-dark-theme {
+    background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  
+    height: 38px;
+    min-width: 117px;
+    left: 20px;
+    top: 286px;
+    border: none;
+    border-radius: 74px;
+    padding: 12px 24px 12px 24px;
+    text-align: center;
+  
+    @include font(12px, 500, 14px, 0em);
+  
+    @media screen and (min-width: 768px) {
+      height: 40px;
+      min-width: 128px;
+      left: 32px;
+      top: 292px;
+      border: none;
+      padding: 10px 24px 10px 24px;
+  
+      @include font(14px, 500, 16px, 0em);
+    }
+  
+    @media screen and (min-width: 1280px) {
+      height: 48px;
+      min-width: 139px;
+      left: 0px;
+      top: 93px;
+      padding: 12px 24px 12px 24px;
+  
+      @include font(16px, 500, 24px, 0em);
+    }
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgb(62, 62, 62);
+    }
+  }
+  
+  .remind-me-dark-theme {
+    background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  
+    height: 38px;
+    min-width: 117px;
+    left: 21px;
+    top: 1868px;
+    border: none;
+    border-radius: 74px;
+    padding: 12px 24px 12px 24px;
+    text-align: center;
+  
+    @include font(12px, 500, 14px, 0em);
+  
+    @media screen and (min-width: 768px) {
+      height: 40px;
+      min-width: 119px;
+      left: 32px;
+      top: 1671px;
+  
+      @include font(14px, 500, 16px, 0em);
+    }
+  
+    @media screen and (min-width: 1280px) {
+      height: 40px;
+      min-width: 119px;
+      left: 821px;
+      top: 474px;
+  
+      @include font(14px, 500, 16px, 0em);
+    }
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgb(62, 62, 62);
+    }
+  }
+  
+  .remove-from-my-library-black-btn-dark-theme {
+    //  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  
+    // box-shadow: inset 0px 0px 0px 100vw rgba(17, 17, 17, 1);
+  
+    background-color: black;
+    color: rgba(248, 248, 248, 1);
+  
+    height: 38px;
+    min-width: 106px;
+    left: 16px;
+    top: 757px;
+    border: 1px solid rgba(248, 65, 25, 1); //transparent
+    border-radius: 74px;
+    padding: 12px 24px 12px 24px;
+    text-align: center;
+  
+    @include font(12px, 500, 14px, 0em);
+  
+    @media screen and (min-width: 768px) {
+      height: 40px;
+      min-width: 115px;
+      left: 326px;
+      top: 1595px;
+  
+      @include font(12px, 500, 16px, 0em);
+    }
+  
+    @media screen and (min-width: 1280px) {
+      height: 48px;
+      min-width: 140px;
+      left: 455px;
+      top: 436px;
+  
+      @include font(16px, 500, 24px, 0em);
+    }
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgb(240, 123, 96);
+    }
+  }
+  
+  .add-to-my-library-black-btn-dark-theme {
+    background-color: #f84119;
+    // Для отримання бордер градієнту розкоментувати  і дивись властивість border:
+    //  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+    // box-shadow: inset 0px 0px 0px 100vw rgba(17, 17, 17, 1);
+  
+    background-color: black;
+    color: rgba(248, 248, 248, 1);
+  
+    height: 38px;
+    min-width: 106px;
+    left: 16px;
+    top: 757px;
+    border: 1px solid rgba(248, 65, 25, 1); //Для отримання бордер градієнту transparent замість rgba
+    border-radius: 74px;
+    padding: 12px 24px 12px 24px;
+    text-align: center;
+  
+    @include font(12px, 500, 14px, 0em);
+  
+    @media screen and (min-width: 768px) {
+      height: 40px;
+      min-width: 115px;
+      left: 326px;
+      top: 1595px;
+  
+      @include font(12px, 500, 16px, 0em);
+    }
+  
+    @media screen and (min-width: 1280px) {
+      height: 48px;
+      min-width: 140px;
+      left: 455px;
+      top: 436px;
+  
+      @include font(16px, 500, 24px, 0em);
+    }
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgb(240, 123, 96);
+    }
+  }
+  
+  .load-more-light-theme {
+    background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  
+    height: 38px;
+    min-width: 106px;
+    left: 107px;
+    top: 4274px;
+    border: none;
+    border-radius: 74px;
+    padding: 12px 24px 12px 24px;
+    text-align: center;
+  
+    @include font(12px, 500, 14px, 0em);
+  
+    @media screen and (min-width: 768px) {
+      height: 40px;
+      min-width: 115px;
+      left: 326px;
+      top: 1595px;
+  
+      @include font(14px, 500, 16px, 0em);
+    }
+  
+    @media screen and (min-width: 1280px) {
+      height: 52px;
+      min-width: 134px;
+      left: 120px;
+      top: 907px;
+  
+      @include font(16px, 500, 24px, 0em);
+    }
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgba(255, 194, 38, 1);
+    }
+  }
+  
+  .search-movie-light-theme {
+    background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  
+    height: 38px;
+    min-width: 121px;
+    left: 99px;
+    top: 612px;
+    border: none;
+    border-radius: 74px;
+    padding: 12px 24px 12px 24px;
+    text-align: center;
+  
+    @include font(12px, 500, 14px, 0em);
+  
+    @media screen and (min-width: 768px) {
+      height: 40px;
+      min-width: 133px;
+      left: 317px;
+      top: 640px;
+  
+      @include font(14px, 500, 16px, 0em);
+    }
+  
+    @media screen and (min-width: 1280px) {
+      height: 52px;
+      min-width: 158px;
+      left: 561px;
+      top: 1032px;
+  
+      @include font(18px, 500, 28px, 0em);
+    }
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgba(255, 194, 38, 1);
+    }
+  }
+  
+  .watch-trailer-light-theme {
+    background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  
+    height: 38px;
+    min-width: 117px;
+    left: 20px;
+    top: 286px;
+    border: none;
+    border-radius: 74px;
+    padding: 12px 24px 12px 24px;
+    text-align: center;
+  
+    @include font(12px, 500, 14px, 0em);
+  
+    @media screen and (min-width: 768px) {
+      height: 40px;
+      min-width: 128px;
+      left: 32px;
+      top: 292px;
+      border: none;
+      padding: 10px 24px 10px 24px;
+  
+      @include font(14px, 500, 16px, 0em);
+    }
+  
+    @media screen and (min-width: 1280px) {
+      height: 48px;
+      min-width: 139px;
+      left: 0px;
+      top: 93px;
+      padding: 12px 24px 12px 24px;
+  
+      @include font(16px, 500, 24px, 0em);
+    }
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgba(255, 194, 38, 1);
+    }
+  }
+  
+  .remind-me-light-theme {
+    background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  
+    height: 38px;
+    min-width: 117px;
+    left: 21px;
+    top: 1868px;
+    border: none;
+    border-radius: 74px;
+    padding: 12px 24px 12px 24px;
+    text-align: center;
+  
+    @include font(12px, 500, 14px, 0em);
+  
+    @media screen and (min-width: 768px) {
+      height: 40px;
+      min-width: 119px;
+      left: 32px;
+      top: 1671px;
+  
+      @include font(14px, 500, 16px, 0em);
+    }
+  
+    @media screen and (min-width: 1280px) {
+      height: 40px;
+      min-width: 119px;
+      left: 821px;
+      top: 474px;
+  
+      @include font(14px, 500, 16px, 0em);
+    }
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgba(255, 194, 38, 1);
+    }
+  }
+  
+  
+  .remove-from-my-library-white-btn-light-theme {
+    //  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  
+    // box-shadow: inset 0px 0px 0px 100vw rgba(17, 17, 17, 1);
+  
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(17, 17, 17, 1);
+  
+    height: 38px;
+    min-width: 106px;
+    left: 16px;
+    top: 757px;
+    border: 1px solid rgba(248, 65, 25, 1); //transparent
+    border-radius: 74px;
+    padding: 12px 24px 12px 24px;
+    text-align: center;
+  
+    @include font(12px, 500, 14px, 0em);
+  
+    @media screen and (min-width: 768px) {
+      height: 40px;
+      min-width: 115px;
+      left: 326px;
+      top: 1595px;
+  
+      @include font(12px, 500, 16px, 0em);
+    }
+  
+    @media screen and (min-width: 1280px) {
+      height: 48px;
+      min-width: 140px;
+      left: 455px;
+      top: 436px;
+  
+      @include font(16px, 500, 24px, 0em);
+    }
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgb(240, 123, 96);
+    }
+  }
+  
+  // .add-to-my-library-black-btn-light-theme {
+  //   background-color: #f84119;
+  // }
+  
+  .add-to-my-library-white-btn-light-theme {
+    background-color: #f84119;
+    // Для отримання бордер градієнту розкоментувати  і дивись властивість border:
+    //  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+    // box-shadow: inset 0px 0px 0px 100vw rgba(17, 17, 17, 1);
+  
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(17, 17, 17, 1);
+  
+    height: 38px;
+    min-width: 106px;
+    left: 16px;
+    top: 757px;
+    border: 1px solid rgba(248, 65, 25, 1); //Для отримання бордер градієнту transparent замість rgba
+    border-radius: 74px;
+    padding: 12px 24px 12px 24px;
+    text-align: center;
+  
+    @include font(12px, 500, 14px, 0em);
+  
+    @media screen and (min-width: 768px) {
+      height: 40px;
+      min-width: 115px;
+      left: 326px;
+      top: 1595px;
+  
+      @include font(12px, 500, 16px, 0em);
+    }
+  
+    @media screen and (min-width: 1280px) {
+      height: 48px;
+      min-width: 140px;
+      left: 455px;
+      top: 436px;
+  
+      @include font(16px, 500, 24px, 0em);
+    }
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgb(240, 123, 96);
+    }
+  }
+  
+  .search-white-magnifier-dark-theme {
+    background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+    height: 40px;
+    width: 40px;
+    border: none;
+    left: 2643px;
+    top: 3845px;
+    border-radius: 50px;
+  
+    @media screen and (min-width: 768px) {
+  height: 44px;
+    width: 44px;
+    }
+  
+    @media screen and (min-width: 1280px) {
+  height: 48x;
+    width: 48px;
+    }
+  
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgb(62, 62, 62);
+    }
+  }
+  
+  .search-black-magnifier-light-theme {
+    background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+    height: 40px;
+    width: 40px;
+    border: none;
+    left: 2643px;
+    top: 3845px;
+    border-radius: 50px;
+    // border: 1px solid rgba(248, 65, 25, 1);
+  
+    @media screen and (min-width: 768px) {
+  height: 44px;
+    width: 44px;
+    }
+  
+    @media screen and (min-width: 1280px) {
+  height: 48x;
+    width: 48px;
+    }
+  
+    &:active,
+    &:hover {
+      border: 1px solid rgba(255, 194, 38, 1);
+    }
+  }
+  
+  
+  
