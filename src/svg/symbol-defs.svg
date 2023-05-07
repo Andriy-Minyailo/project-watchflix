@@ -268,14 +268,5 @@
   <symbol id="icon-sun_moon" viewBox="0 0 15 15">
     <path d="M1.026 7.774c.242 3.347 3.175 6.07 6.685 6.22 2.476.103 4.691-1.014 6.02-2.775.55-.722.255-1.203-.664-1.04-.45.078-.913.11-1.396.09-3.282-.13-5.967-2.787-5.98-5.926a5.624 5.624 0 0 1 .503-2.372c.362-.805-.074-1.189-.913-.844C2.623 2.212.805 4.805 1.026 7.774Z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
-    <symbol id="spark-off" viewBox="0 0 4 14">
-      <path d="M2.824 1.574c-2.88 3.077-2.869 8.077.024 11.168" stroke="url(#a)" stroke-width="1.2" stroke-linecap="round"/>
-    </symbol>
-    <symbol id="spark-on">
-  <svg width="4" height="14" viewBox="0 0 4 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M1.176 1.574c2.88 3.077 2.869 8.077-.024 11.168" stroke="url(#a)" stroke-width="1.2" stroke-linecap="round"/>
-      
-  </svg>
-</symbol>
 </defs>
 </svg>
