@@ -49,18 +49,9 @@ function getMovieList() {
   return [];
 }
 
-function addMovie() {
+async function addMovie() {
   // Добавляем новый фильм в список фильмов
-  const newMovie = {
-    poster_path: "new-poster.jpg",
-    original_title: "New Movie",
-    genre_ids: [1, 2, 3],
-    overview: "Lorem ipsum dolor sit amet.",
-    release_date: "2023-05-07",
-    vote_average: 8.5,
-    id: 123456,
-  };
-
+  const newMovie = await requestServer.getNewMovie();
   const movieList = getMovieList();
   movieList.push(newMovie);
 
@@ -75,11 +66,9 @@ function addMovie() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadMovies();
+loadMovies();
 
-  const addButton = document.querySelector(".add__button");
-  if (addButton) {
-    addButton.addEventListener("click", addMovie);
-  }
-});
+const addButton = document.querySelector(".add__button");
+if (addButton) {
+  addButton.addEventListener("click", addMovie);
+}
