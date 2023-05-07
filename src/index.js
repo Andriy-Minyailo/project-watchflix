@@ -6,8 +6,6 @@ import './js/menu';
 
 import './js/hero';
 
-
-
+import './js/weekly-trends';
 
 import './js/upcoming';
-
