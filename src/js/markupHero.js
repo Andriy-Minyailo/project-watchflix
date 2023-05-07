@@ -1,29 +1,29 @@
 export function markupHero(results) {
-const result = results[Math.round(Math.random() * (results.length - 1))];
+  let result = results[Math.round(Math.random() * (results.length - 1))];
+  let path = '';
+  
+  if (!result) {
+    result = { original_title: 'Let’s Make Your Own Cinema',
+      overview: `Is a guide to creating a personalized movie theater experience. 
+        You'll need a projector, screen, and speakers. Decorate your space, choose your 
+        films, and stock up on snacks for the full experience.`,
+      vote_average: '',
+      id: ''
+    };
+    path = `../img/upgrade/desktop.jpg;`;
+  }
 
- console.log(result)
   const { backdrop_path,
-    poster_path,
     original_title = '',
     overview = '',
-    release_date = '',
     vote_average = '',
     id } = result;
-  console.log(release_date)
-        let releaseDate;
-        if (!original_title) {
-          releaseDate = 'Let’s Make Your Own Cinema';
-        } else {
-          releaseDate = release_date.substring(0, 4);
-        }
-        let path = `https://image.tmdb.org/t/p/original${backdrop_path}`;
-        if (!backdrop_path) {
-          path = '../img/upgrade/desktop.jpg';
-        }
-      let rating = vote_average.toFixed(1);
+  
+  path = `https://image.tmdb.org/t/p/original${backdrop_path}`;      
+  
         return `<div class="hero__discription">
             <h2 class="hero__title">${original_title}</h2>
-            <p class="hero__rating">${rating}</p>
+            <p class="hero__rating">${vote_average}</p>
             <p class="hero__text">${overview}</p>
             <button class="hero__btn watch-trailer-dark-theme" type="button">Watch trailer</button>
             <div class="hero__slider">
@@ -37,8 +37,6 @@ const result = results[Math.round(Math.random() * (results.length - 1))];
             <div class="hero__backgr" id="${id}">
             <img src='${path}' loading="lazy" alt="${overview}" class="hero__img" />
             </div>`;
-
-
 }
 
 

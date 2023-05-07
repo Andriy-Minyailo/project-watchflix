@@ -12,8 +12,8 @@ async function ontrendingDay() {
     try {
         const responseDay = await requestServer.trendingDay();
         const { results } = responseDay.data;
-        console.log(results);
-      const filmOfDay = results;
+    
+        const filmOfDay = results;
         const markupBackgr = markupHero(filmOfDay);
 
       ref.hero.innerHTML = markupBackgr;
