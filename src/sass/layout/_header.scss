@@ -1,19 +1,15 @@
 
 .header-nav {
-  // width: 320px;
   height: 48px;
-  display: block;
-    
-    // background: #000000;
-    margin-left: auto;
-    margin-right: auto; 
-    @include tel {
-        // width: 320px;
-        height: 48px;
-       
-      }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+    // @include tel {
+    //   height: 48px;
+    // }
+
       @include tablet {
-        // width: 768px;
         padding-left: 32px;
         padding-right: 32px;
         height: 60px;
@@ -24,41 +20,96 @@
         // width: 1280px;
       }
 }
-
+.header-logo {
+  display: flex;
+  margin-left: 20px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.name {
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  @include tel {
+    display: none;
+  }
+   @include tablet {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+  }
+}
 .header-nav-list {
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
+  display: none;
+  margin-right: auto;
+  margin-left: auto;
+    @include tablet {
+      display: flex;
+    }
 }
 .header-nav-item {
-    padding-right: 40px;
-     
+  padding-right: 40px;
 }
 .header-link {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    color: #B7B7B7;
-    text-decoration: none;
-    color: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #B7B7B7;
 }
 
 .toggel-btn {
-    margin-right: 32px;
-    color: rgb(255, 98, 0);
+  margin-right: 20px;
+  border: none;
+  background: inherit;
 }
+
+
+// ------моб меню--------
 
 
 .header-menu {
   font-size: 14px;
   line-height: 16px;
   color: #B7B7B7;
-  text-decoration: none;
+  border: none;
+  background: inherit;
+
+    @include tablet {
+      display: none;
+    }
+}
+.mob-menu-container {
+padding-left: 20px;
+padding-top: 20px;
+
+}
+
+.mob-menu {
+  position: absolute;
+  left: -204px;
+  top: 0;
+  width: 204px;
+  transition: transform 300ms;
+  background-color: aquamarine;
+}
+.header.open .mob-menu {
+  transform: translateX(100%);
 }
 .mob-menu-item {
   font-size: 14px;
   line-height: 16px;
   color: #FFFFFF;
-  text-decoration: none;
   color: inherit;
+  padding-bottom: 24px;
+}
+.mob-menu-svg {
+  border: none;
+  background: inherit;
+  padding-bottom: 40px;
+}
+.mob-menu-link {
+  color: #B7B7B7;
 }

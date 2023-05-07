@@ -1,6 +1,7 @@
 .footer {
   display: inline-flex;
   align-items: flex-end;
+  margin-top: 100px;
       
       @include tablet {
         width: 768px;
