@@ -1,74 +1,55 @@
 import { markup } from "./markup.js";
-import { RequestServer } from "./requestServer.js";
 import { requestGenre } from "./nameGenres.js";
 
-const requestServer = new RequestServer();
+const KEY_MOVIE_LIST = "movieList";
+ const movieContainer = document.querySelector(".not-found__container");
+  const testMovieList = {
+    poster_path: "/v7UF7ypAqjsFZFdjksjQ7IUpXdn.jpg",
+    original_title: "Dungeons & Dragons: Honor Among Thieves",
+    genre_ids: [12, 14, 35],
+    overview: 
+"A charming thief and a band of unlikely adventurers undertake an epic heist to retrieve a lost relic, but things go dangerously awry when they run afoul of the wrong people.",
+    release_date: "2023-03-23",
+    vote_average: 7.56,
+    id: 493529,
+  };
 
-async function loadMovies() {
-  await requestGenre();
-
-  const response = await requestServer.newFilms();
-  const { results } = response.data;
-
-  const movieList = results.map(({
-    poster_path,
-    original_title = "",
-    genre_ids,
-    overview = "",
-    release_date = "",
-    vote_average = "",
-    id,
-  }) => ({
-    poster_path,
-    original_title,
-    genre_ids,
-    overview,
-    release_date,
-    vote_average,
-    id,
-  }));
-
-  saveMovieList(movieList);
-
-  const markupCard = markup(movieList);
-  const movieContainer = document.querySelector(".movie__container");
-  if (movieContainer) {
-    movieContainer.innerHTML = markupCard;
+export function loadMoveList(obj) {
+  const currentState = getMovieList(KEY_MOVIE_LIST);
+  console.log(currentState);
+  if (!currentState) {
+          saveMovieList(KEY_MOVIE_LIST, [obj]);
+      // console.log(currentState);
+  } else {
+    currentState.push(testMovieList);
   }
 }
+loadMoveList(testMovieList); // це функція для перевірки і збереження в localStorafe
 
-function saveMovieList(movieList) {
-  localStorage.setItem("movieList", JSON.stringify(movieList));
+async function checkLocalStorage(key) {
+  const localMovieList = getMovieList(key);
+  if (localMovieList) {
+    const genres = await requestGenre();
+    const localMarkup = markup(localMovieList);
+      movieContainer.innerHTML = localMarkup;
+  } 
 }
 
-function getMovieList() {
-  const movieList = localStorage.getItem("movieList");
-  if (movieList) {
-    return JSON.parse(movieList);
-  }
-  return [];
+checkLocalStorage(KEY_MOVIE_LIST);
+
+function saveMovieList(key, obj) {
+  try {
+    localStorage.setItem(key, JSON.stringify(obj));
+  } catch (error) {
+      console.log(error);
+  };
 }
 
-async function addMovie() {
-  // Добавляем новый фильм в список фильмов
-  const newMovie = await requestServer.getNewMovie();
-  const movieList = getMovieList();
-  movieList.push(newMovie);
-
-  // Сохраняем обновленный список фильмов в localStorage
-  saveMovieList(movieList);
-
-  // Обновляем разметку страницы
-  const markupCard = markup(movieList);
-  const movieContainer = document.querySelector(".movie__container");
-  if (movieContainer) {
-    movieContainer.innerHTML = markupCard;
-  }
-}
-
-loadMovies();
-
-const addButton = document.querySelector(".add__button");
-if (addButton) {
-  addButton.addEventListener("click", addMovie);
+function getMovieList(key) {
+  try {
+    const movieList = localStorage.getItem(key);
+    return movieList === null ? undefined : JSON.parse(movieList);
+  } catch (error) {
+    console.log(error);
+  };
 }
