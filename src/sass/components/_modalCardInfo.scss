@@ -1,0 +1,142 @@
+.popup {
+    // padding: 60px;
+    
+}
+.popup__body {
+  background-color: black;
+  padding: 60px;
+}
+.popup__content {
+}
+.btn__close {
+}
+.btn-input__close {
+}
+.modal__content {
+  display: flex;
+}
+.modal__column {
+}
+.modal__img {
+    width: 375px;
+    height: 478px;
+}
+.modal__img-true{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.modal__info {
+    display: flex;
+    flex-direction: column;
+}
+.discription {display: flex;
+    flex-direction: column;
+    width: 330px
+}
+.column__name {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+
+  /* White */
+
+  color: #ffffff;
+}
+.column__list {
+    display: flex;
+    flex-direction: column;
+}
+.column__items{
+    display: flex;
+}
+.column__item {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+
+  color: #b7b7b7;
+}
+
+.column__item-join {
+    display: flex;
+}
+
+.flex{ 
+    flex: 1 1 50%;
+}
+.column__item-white{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+
+
+// display: flex;
+// align-items: center;
+// text-transform: uppercase;
+
+/* White */
+
+color: #FFFFFF;
+}
+.column__about {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height, or 100% */
+
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  /* Grey */
+
+  color: #b7b7b7;
+}
+.column__text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  /* Secondary text */
+
+  color: #f8f8f8;
+}
+.btn__action {  
+}
+
+.btn__add-to-library {
+  border: 1px solid transparent;
+  background: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
+
+  
+  width: 140px;
+  height: 40px;
+
+  border-radius: 74px;
+}
+
+.btn__text {
+    text-align: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  
+
+  color: #ffffff;
+}
