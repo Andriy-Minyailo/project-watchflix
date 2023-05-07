@@ -119,8 +119,11 @@ color: #FFFFFF;
 }
 
 .btn__add-to-library {
+ 
   border: 1px solid transparent;
-  background: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
+  border-image: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
+  border-image-slice: 1;
+  background:black;
 
   
   width: 140px;
