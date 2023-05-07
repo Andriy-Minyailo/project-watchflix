@@ -6,13 +6,10 @@
   align-items: center;
 
     // @include tel {
-     
     //   height: 48px;
-       
-    //   }
+    // }
 
       @include tablet {
-        // width: 768px;
         padding-left: 32px;
         padding-right: 32px;
         height: 60px;
@@ -26,12 +23,10 @@
 .header-logo {
   display: flex;
   margin-left: 20px;
-
 }
 .logo {
   display: flex;
   justify-content: center;
-     
 }
 .name {
   font-size: 24px;
@@ -47,34 +42,32 @@
     padding-left: 8px;
   }
 }
-
 .header-nav-list {
-    display: none;
-    margin-right: auto;
-    margin-left: auto;
+  display: none;
+  margin-right: auto;
+  margin-left: auto;
     @include tablet {
-      // width: 768px;
-    display: flex;
+      display: flex;
     }
 }
 .header-nav-item {
-    padding-right: 40px;
-     
+  padding-right: 40px;
 }
 .header-link {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    color: #B7B7B7;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #B7B7B7;
 }
 
 .toggel-btn {
-    margin-right: 20px;
-    // color: rgb(255, 98, 0);
-    border: none;
-    background: inherit;
+  margin-right: 20px;
+  border: none;
+  background: inherit;
 }
 
+
+// ------моб меню--------
 
 
 .header-menu {
@@ -83,6 +76,7 @@
   color: #B7B7B7;
   border: none;
   background: inherit;
+
     @include tablet {
       display: none;
     }
@@ -91,6 +85,18 @@
 padding-left: 20px;
 padding-top: 20px;
 
+}
+
+.mob-menu {
+  position: absolute;
+  left: -204px;
+  top: 0;
+  width: 204px;
+  transition: transform 300ms;
+  background-color: aquamarine;
+}
+.header.open .mob-menu {
+  transform: translateX(100%);
 }
 .mob-menu-item {
   font-size: 14px;
