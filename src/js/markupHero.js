@@ -1,12 +1,14 @@
 export function markupHero(results) {
- console.log(results[2])
+const result = results[Math.round(Math.random() * (results.length - 1))];
+
+ console.log(result)
   const { backdrop_path,
     poster_path,
     original_title = '',
     overview = '',
     release_date = '',
     vote_average = '',
-    id } = results[1];
+    id } = result;
         let releaseDate;
         if (!release_date) {
           releaseDate = 'no date';
