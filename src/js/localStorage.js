@@ -1,43 +1,51 @@
-import { markup } from "./markup.js";
-import { requestGenre } from "./nameGenres.js";
+// import { checkLocalStorage } from "./checkLocalStorage.js";
+// import { requestGenre } from "./nameGenres.js";
+// import { baseLocalMarkup } from "./baseLocalMarkup.js";
 
-const KEY_MOVIE_LIST = "movieList";
- const movieContainer = document.querySelector(".not-found__container");
-  const testMovieList = {
-    poster_path: "/v7UF7ypAqjsFZFdjksjQ7IUpXdn.jpg",
-    original_title: "Dungeons & Dragons: Honor Among Thieves",
-    genre_ids: [12, 14, 35],
-    overview: 
-"A charming thief and a band of unlikely adventurers undertake an epic heist to retrieve a lost relic, but things go dangerously awry when they run afoul of the wrong people.",
-    release_date: "2023-03-23",
-    vote_average: 7.56,
-    id: 493529,
-  };
+export const KEY_MOVIE_LIST = "movieList";
 
-export function loadMoveList(obj) {
+export function loadMoveList(data) {
   const currentState = getMovieList(KEY_MOVIE_LIST);
   console.log(currentState);
   if (!currentState) {
-          saveMovieList(KEY_MOVIE_LIST, [obj]);
+          saveMovieList(KEY_MOVIE_LIST, [data]);
       // console.log(currentState);
   } else {
-    currentState.push(testMovieList);
+    currentState.push(data);
+    saveMovieList(KEY_MOVIE_LIST, currentState);
   }
 }
-loadMoveList(testMovieList); // це функція для перевірки і збереження в localStorafe
 
-async function checkLocalStorage(key) {
-  const localMovieList = getMovieList(key);
-  if (localMovieList) {
-    const genres = await requestGenre();
-    const localMarkup = markup(localMovieList);
-      movieContainer.innerHTML = localMarkup;
-  } 
-}
+// export function deleteLocalFilm(index) {
+//   const currentState = getMovieList(KEY_MOVIE_LIST);
+//   currentState.splice(index, 1);
+//   saveMovieList(KEY_MOVIE_LIST, currentState);
+//   // checkLocalStorage();
+// }
+// loadMoveList(testMovieList); // це функція для перевірки і збереження в localStorafe
+// loadMoveList(testMovieList2); // це функція для перевірки і збереження в localStorafe
 
-checkLocalStorage(KEY_MOVIE_LIST);
 
-function saveMovieList(key, obj) {
+// export function checkLocalStorage(key) {
+//   const localMovieList = getMovieList(key);
+//   console.log(localMovieList);
+//   if (localMovieList) {
+//     console.log(localMovieList);
+   
+    
+//     // refs.moviBase.innerHTML = "";
+//     refs.movieContainer.innerHTML = localMovieList;
+//     // refs.movieContainer.classList.remove('not-found__container');
+//   }
+//    else {
+//     refs.moviBase.innerHTML = baseLocalMarkup;
+//     console.log(baseLocalMarkup);
+//     }
+// }
+
+// checkLocalStorage(KEY_MOVIE_LIST);
+
+export function saveMovieList(key, obj) {
   try {
     localStorage.setItem(key, JSON.stringify(obj));
   } catch (error) {
@@ -45,7 +53,7 @@ function saveMovieList(key, obj) {
   };
 }
 
-function getMovieList(key) {
+export function getMovieList(key) {
   try {
     const movieList = localStorage.getItem(key);
     return movieList === null ? undefined : JSON.parse(movieList);

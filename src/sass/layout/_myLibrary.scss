@@ -41,7 +41,7 @@
         rgba(14, 14, 14, 0) 60.07%
       ),
       url('/src/img/upgrade/chairsmobile.jpg');
-    min-width: 320px;
+    // max-width: 320px;
     min-height: 380px;
 
     @include retina {
@@ -78,6 +78,7 @@
     transform: translateX(-117px);
     left: 117px;
     position: relative;
+    width: 1000px;
   }
 }
 
@@ -126,7 +127,7 @@
         rgba(14, 14, 14, 0) 60.07%
       ),
       url('/src/img/upgrade/chairstablet.jpg');
-    min-width: 768px;
+    // min-width: 768px;
     min-height: 372px;
 
     @include retina {
@@ -181,7 +182,7 @@
         rgba(14, 14, 14, 0) 60.07%
       ),
       url('/src/img/upgrade/chairsdesktop.jpg');
-    min-width: 1280px;
+    // min-width: 1280px;
     min-height: 720px;
 
     @include retina {
@@ -198,19 +199,19 @@
 // not found
 
 .not-found__container {
-  background-color: #111111;
+  // background-color: #111111;
 
   @include tel {
     min-height: 332px;
-    min-width: 320px;
+    // min-width: 320px;
   }
 
   @include tablet {
-    width: 768px;
+    width: 704px;
   }
 
   @include desktop {
-    width: 1280px;
+    width: 1216px;
     height: 720px;
   }
 
@@ -321,5 +322,18 @@
 
   @include desktop {
     transform: translateY(160px);
+  }
+}
+
+.my-library__card {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include tablet {
+    padding-top: 90px;
+      padding-bottom: 60px;
+  }
+  @include desktop {
+      padding-top: 115px;
+        padding-bottom: 95px;
   }
 }
