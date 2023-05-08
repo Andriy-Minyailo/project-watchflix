@@ -1,23 +1,33 @@
 //        Розмітка index.html для перевірки
 //
+// <h3> Темна тема </h3>
 //       <div style="margin: 15px"><button type="button" class="load-more-dark-theme">Load more</button></div>
 //       <div style="margin: 15px"><button type="button" class="search-movie-dark-theme">Search movie</button></div>
 //       <div style="margin: 15px"><button type="button" class="watch-trailer-dark-theme">Watch trailer</button></div>
 //       <div style="margin: 15px"><button type="button" class="remind-me-dark-theme">Remind me</button></div>
 //       <div style="margin: 15px"><button type="button" class="remove-from-my-library-black-btn-dark-theme">Remove from my library</button></div>
-//
+
 //       <div style="margin: 15px"><button type="button" class="add-to-my-library-black-btn-dark-theme">Add to my library</button></div>
-//
+//       <div style="margin: 15px"><button type="button" class="search-white-magnifier-dark-theme"></button></div>
+//       <div style="margin: 15px"><button type="button" class="pagination-active-dark-theme">5</button></div>
+//       <div style="margin: 15px"><button type="button"
+//  class="pagination-dark-theme">5</button></div>
+
+// <h3> Світла тема </h3>
+
 //       <div style="margin: 15px"><button type="button" class="load-more-light-theme">Load more</button></div>
 //       <div style="margin: 15px"><button type="button" class="search-movie-light-theme">Search movie</button></div>
 //       <div style="margin: 15px"><button type="button" class="watch-trailer-light-theme">Watch trailer</button></div>
 //       <div style="margin: 15px"><button type="button" class="remind-me-light-theme">Remind me</button></div>
-//
+
 //       <div style="margin: 15px"><button type="button" class="remove-from-my-library-white-btn-light-theme">Remove from my library</button></div>
-//
+
 //       <div style="margin: 15px"><button type="button" class="add-to-my-library-white-btn-light-theme">Add to my library</button></div>
-//       <div style="margin: 15px"><button type="button" class="search-white-magnifier-dark-theme"></button></div>
 //       <div style="margin: 15px"><button type="button" class="search-black-magnifier-light-theme"></button></div>
+//     <div style="margin: 15px"><button type="button" class="pagination-active-light-theme">5</button></div>
+//     <div style="margin: 15px"><button type="button" class="pagination-light-theme">5</button></div>
+
+//  ==============  ТЕМНА ТЕМА  =================================
 
 .load-more-dark-theme {
   background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
@@ -132,6 +142,7 @@
 
   &:active,
   &:hover {
+
     border: 1px solid rgb(62, 62, 62);
   }
 }
@@ -170,6 +181,7 @@
 
   &:active,
   &:hover {
+
     border: 1px solid rgb(62, 62, 62);
   }
 }
@@ -179,9 +191,9 @@
 
   // box-shadow: inset 0px 0px 0px 100vw rgba(17, 17, 17, 1);
 
+
   background-color: black;
   color: rgba(248, 248, 248, 1);
-
   height: 38px;
   min-width: 106px;
   left: 16px;
@@ -217,15 +229,15 @@
   }
 }
 
+
 .add-to-my-library-black-btn-dark-theme {
+
   background-color: #f84119;
   // Для отримання бордер градієнту розкоментувати  і дивись властивість border:
   //  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
   // box-shadow: inset 0px 0px 0px 100vw rgba(17, 17, 17, 1);
-
   background-color: black;
   color: rgba(248, 248, 248, 1);
-
   height: 38px;
   min-width: 106px;
   left: 16px;
@@ -260,6 +272,108 @@
     border: 1px solid rgb(240, 123, 96);
   }
 }
+
+.search-white-magnifier-dark-theme {
+  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+
+  background-image: url('/src/svg/Icon_button_white.svg');
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  border: none;
+  left: 2643px;
+  top: 3845px;
+  border-radius: 50px;
+
+  @media screen and (min-width: 768px) {
+    height: 44px;
+    width: 44px;
+  }
+
+  @media screen and (min-width: 1280px) {
+
+    height: 48x;
+
+    width: 48px;
+  }
+
+  &:active,
+  &:hover {
+    border: 1px solid rgb(62, 62, 62);
+  }
+}
+
+
+.pagination-active-dark-theme {
+  background: transparent;
+  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  color: rgba(248, 248, 248, 1);
+
+  height: 24px;
+  width: 24px;
+  border: none;
+  left: 2643px;
+  top: 3845px;
+  border-radius: 50px;
+
+  @include font(10px, 400, 10px, 0em);
+
+  @media screen and (min-width: 768px) {
+    height: 32px;
+    width: 32px;
+
+    @include font(12px, 400, 14px, 0em);
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 40px;
+    width: 40px;
+
+    @include font(14px, 400, 14px, 0em);
+  }
+
+  &:active,
+  &:hover {
+    border: 1px solid rgb(62, 62, 62);
+  }
+}
+
+.pagination-dark-theme {
+  background: transparent;
+
+  border: 1px solid #b7b7b7;
+  color: rgba(248, 248, 248, 1);
+
+  height: 24px;
+  width: 24px;
+  left: 2643px;
+  top: 3845px;
+  border-radius: 50px;
+
+  @include font(10px, 400, 10px, 0em);
+
+  @media screen and (min-width: 768px) {
+    height: 32px;
+    width: 32px;
+
+    @include font(12px, 400, 14px, 0em);
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 40px;
+    width: 40px;
+
+    @include font(14px, 400, 14px, 0em);
+  }
+
+  &:active,
+  &:hover {
+    border: 1px solid #8f8f8f;
+    color: #8f8f8f;
+  }
+}
+
+// ============ СВІТЛА ТЕМА ===============================================
 
 .load-more-light-theme {
   background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
@@ -459,10 +573,6 @@
   }
 }
 
-// .add-to-my-library-black-btn-light-theme {
-//   background-color: #f84119;
-// }
-
 .add-to-my-library-white-btn-light-theme {
   background-color: #f84119;
   // Для отримання бордер градієнту розкоментувати  і дивись властивість border:
@@ -507,40 +617,22 @@
   }
 }
 
-.search-white-magnifier-dark-theme {
-  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
-  height: 40px;
-  width: 40px;
-  border: none;
-  left: 2643px;
-  top: 3845px;
-  border-radius: 50px;
-
-  @media screen and (min-width: 768px) {
-    height: 44px;
-    width: 44px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    height: 48px;
-    width: 48px;
-  }
-
-  &:active,
-  &:hover {
-    border: 1px solid rgb(62, 62, 62);
-  }
-}
-
 .search-black-magnifier-light-theme {
   background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  background-image: url('/src/svg/Icon_button_black.svg');
+  background-position: center;
+
+=======
+
   height: 40px;
   width: 40px;
   border: none;
   left: 2643px;
   top: 3845px;
   border-radius: 50px;
-  // border: 1px solid rgba(248, 65, 25, 1);
+
+=======
+
 
   @media screen and (min-width: 768px) {
     height: 44px;
@@ -557,3 +649,72 @@
     border: 1px solid rgba(255, 194, 38, 1);
   }
 }
+
+
+.pagination-active-light-theme {
+  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  border: none;
+  color: #282828;
+
+  height: 24px;
+  width: 24px;
+  left: 2643px;
+  top: 3845px;
+  border-radius: 50px;
+
+  @include font(10px, 400, 10px, 0em);
+
+  @media screen and (min-width: 768px) {
+    height: 32px;
+    width: 32px;
+
+    @include font(12px, 400, 14px, 0em);
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 40px;
+    width: 40px;
+
+    @include font(14px, 400, 14px, 0em);
+  }
+
+  &:active,
+  &:hover {
+    border: 1px solid rgba(255, 194, 38, 1);
+  }
+}
+
+.pagination-light-theme {
+  background: transparent;
+  border: 1px solid #595959;
+  color: #595959;
+
+  height: 24px;
+  width: 24px;
+  left: 2643px;
+  top: 3845px;
+  border-radius: 50px;
+
+  @include font(10px, 400, 10px, 0em);
+
+  @media screen and (min-width: 768px) {
+    height: 32px;
+    width: 32px;
+
+    @include font(12px, 400, 14px, 0em);
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 40px;
+    width: 40px;
+
+    @include font(14px, 400, 14px, 0em);
+  }
+
+  &:active,
+  &:hover {
+    border: 1px solid #8f8f8f;
+    color: #8f8f8f;
+  }
+}
+
