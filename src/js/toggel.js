@@ -20,30 +20,34 @@
 // старый код выше
 
 // пытался поставить новый код для лайт темы можешь попробовать он не переключает с темной темы на светлую 
-const toggleThemeBtn = document.getElementById('toggle-btn');
-const toggleThemeImage = document.querySelectorAll('.icon-sun_button use, .icon-sun_moon use');
+//* S W I T C H  T H E M E
 
-toggleThemeBtn.addEventListener('click', () => {
-  if (toggleThemeBtn.classList.contains('dark')) {
-    toggleThemeBtn.classList.remove('dark');
-    toggleThemeImage.forEach((icon) => {
-      icon.setAttribute('href', './svg/symbol-defs.svg#icon-sun_moon');
-    });
-    localStorage.theme = 'light';
-  } else {
-    toggleThemeBtn.classList.add('dark');
-    toggleThemeImage.forEach((icon) => {
-      icon.setAttribute('href', './svg/symbol-defs.svg#icon-sun_button');
-    });
-    localStorage.theme = 'dark';
-  }
-});
+let LightSwitcher = document.querySelector('.switcher');
+let isLight = localStorage.getItem('isLight');
 
-if (localStorage.theme === 'dark') {
-  toggleThemeBtn.classList.add('dark');
-  toggleThemeImage.forEach((icon) => {
-    icon.setAttribute('href', './svg/symbol-defs.svg#icon-sun_button');
-  });
+if (isLight === 'true') {
+  document.body.classList.add('light');
 }
 
+LightSwitcher.onclick = function () {
+  document.body.classList.toggle('light');
+  isLight = document.body.classList.contains('light');
+  localStorage.setItem('isLight', isLight);
+};
 
+//* C U R R E N T   P A G E
+
+// Отримати URL поточної сторінки
+var currentUrl = window.location.href;
+
+// Отримати всі елементи посилань у списку
+var navLinks = document.querySelectorAll('.header__nav-link, .mobile-menu__link');
+
+// Пройтись по кожному елементу посилання
+navLinks.forEach(function(link) {
+  // Перевірити, чи співпадає URL посилання з поточним URL
+  if (link.href === currentUrl) {
+    // Додати клас до елементу посилання
+    link.classList.add('link__current');
+  }
+});
