@@ -3,27 +3,28 @@
     <input
       type="text"
       name="searchQuery"
+      id="search-input"
       autocomplete="off"
       placeholder="Search"
       class="search-form__input"
     />
     <input
       type="text"
-      name="searchQuery"
+      name="year"
       autocomplete="off"
       placeholder="Year"
       class="year-form__input"
     />
     <input
       type="text"
-      name="searchQuery"
+      name="genre"
       autocomplete="off"
       placeholder="Genre"
       class="genre-form__input"
     />
     <input
       type="text"
-      name="searchQuery"
+      name="Country"
       autocomplete="off"
       placeholder="Country"
       class="country-form__input"
@@ -32,5 +33,10 @@
   </form>
 </div>
 <div class="container">
-  <ul class="card"></ul>
+  <ul class="card" id="movie-list"></ul>
+</div>
+<div id="pagination">
+  <button data-page="1">1</button>
+  <button data-page="2">2</button>
+  <button data-page="3">3</button>
 </div>
