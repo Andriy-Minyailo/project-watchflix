@@ -4,5 +4,9 @@ import './js/elementCard';
 import './js/hero';
 
 
+
+import './js/localModalJs';
+
 import './js/catalogFilter';
+
 

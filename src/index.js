@@ -12,6 +12,9 @@ import './js/upcoming';
 
 
 
+import './js/localModalJs';
+
+
 import {startrenderModalInfo} from './js/createModalInfo/createModalInfo'
 
 
@@ -19,4 +22,5 @@ startrenderModalInfo(447365)
 
 
 import './js/footerModal';
+
 
