@@ -202,7 +202,16 @@
 
   @include tel {
     min-height: 332px;
-    min-width: 330px;
+    min-width: 320px;
+  }
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 1280px;
+    height: 720px;
   }
 
   position: relative;
@@ -222,6 +231,7 @@
 
   background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
   box-shadow: none;
+  border: none;
 
   font-size: 16px;
   cursor: pointer;
@@ -237,6 +247,8 @@
     max-height: 52px;
     padding: 12px 24px;
 
+    top: 45%;
+    left: 49%;
   }
 }
 
@@ -306,4 +318,8 @@
 
 .not-found__text-ul {
   transform: translateY(40px);
+
+  @include desktop {
+    transform: translateY(160px);
+  }
 }
