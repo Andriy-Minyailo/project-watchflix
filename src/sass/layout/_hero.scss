@@ -61,6 +61,24 @@
   }
 }
 
+.hero__discription-light{
+    @include tablet {
+        background-image: url(../img/upgrade/greyfronttablet.png);
+        background-size: cover;
+        width: 705px;
+        height: 432px;
+        z-index: 10;
+      }
+    
+      @include desktop {
+        background-image: url(../img/upgrade/greygrontdesktop.png);
+        background-size: cover;
+        color:#0E0E0E;
+        height: 721px;
+        width: 1217px;
+      }
+}
+
 .hero__title{
   margin-left: 20px;
   margin-top: 40px;
@@ -85,6 +103,16 @@
     width: 375px;
     font-size: 64px;
   }
+}
+
+.hero__title-light{
+  @include tablet {
+      color: #0E0E0E;
+    }
+  
+    @include desktop {
+      color: #0E0E0E;
+    }
 }
 
 .hero__rating{
@@ -121,6 +149,16 @@
     width: 367px;
     font-size: 16px;
   }
+}
+
+.hero__text-light{
+  @include tablet {
+      color: #0E0E0E;
+    }
+  
+    @include desktop {
+      color: #0E0E0E;
+    }
 }
 
 .hero__btn {
