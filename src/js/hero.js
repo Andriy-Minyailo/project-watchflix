@@ -1,14 +1,13 @@
 import { RequestServer } from "./requestServer";
 import { markupHero } from './markupHero';
 
-
 const ref = {
     hero: document.getElementById("hero")
 }
+
 const requestServer = new RequestServer();
 
 async function ontrendingDay() {
-  
     try {
         const responseDay = await requestServer.trendingDay();
         const { results } = responseDay.data;
@@ -28,10 +27,8 @@ async function ontrendingDay() {
         heroTitle.classList.toggle('hero__title-light');
         heroText.classList.toggle('hero__text-light');
       })
-
     } catch(error) {
     console.log(error);
   };
 }
 ontrendingDay();
-
