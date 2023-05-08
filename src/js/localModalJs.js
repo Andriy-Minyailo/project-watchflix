@@ -19,7 +19,7 @@ const stateButton = {
     currentStateButton: true
 }
 
-refs.card.addEventListener('click', onLoadModal);
+// refs.card.addEventListener('click', onLoadModal);
 
 function onLoadModal(event) {
     const { id } = event.target.offsetParent;
@@ -60,7 +60,7 @@ function checkFilmLocalStorage(idFilm) {
   }
     }
 
-refs.btnModalInfo.addEventListener('click', onLoadLocalStorage);
+// refs.btnModalInfo.addEventListener('click', onLoadLocalStorage);
 
 function onLoadLocalStorage(event) {
    
