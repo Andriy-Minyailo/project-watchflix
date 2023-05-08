@@ -1,42 +1,63 @@
-<div class="search-container">
-  <form class="search-form" id="search-form">
+<div class="container">
+  <form class="catalog__search-form" id="catalog-search-form">
     <input
+      id="catalog-search-input"
       type="text"
       name="searchQuery"
-      id="search-input"
       autocomplete="off"
-      placeholder="Search"
-      class="search-form__input"
+      placeholder="Film"
+      class="catalog__search-form-input catalog__search-form-input--film"
     />
-    <input
-      type="text"
-      name="year"
-      autocomplete="off"
-      placeholder="Year"
-      class="year-form__input"
-    />
-    <input
-      type="text"
-      name="genre"
-      autocomplete="off"
-      placeholder="Genre"
-      class="genre-form__input"
-    />
-    <input
-      type="text"
-      name="Country"
-      autocomplete="off"
-      placeholder="Country"
-      class="country-form__input"
-    />
-    <button type="submit" class="search-white-magnifier-dark-theme"></button>
+    <select
+      name="catalog-year"
+      id="catalog-year-select"
+      class="catalog__search-form-input catalog__search-form-input--year catalog__search-form-input--hidden"
+    >
+      <option value="" disabled selected>Year</option>
+    </select>
+    <select
+      name="catalog-genre"
+      id="catalog-genre-select"
+      class="catalog__search-form-input catalog__search-form-input--genre catalog__search-form-input--hidden"
+    >
+      <option value="" disabled selected>Genre</option>
+    </select>
+    <select
+      name="catalog-country"
+      id="catalog-country-select"
+      class="catalog__search-form-input catalog__search-form-input--country catalog__search-form-input--hidden"
+    >
+      <option value="" disabled selected>Country</option>
+      <option value="USA">USA</option>
+      <option value="Great Britain">Great Britain</option>
+      <option value="France">France</option>
+      <option value="German">German</option>
+      <option value="Spain">Spain</option>
+      <option value="Mexico">Mexico</option>
+    </select>
+    <button
+      type="submit"
+      id="subbmit"
+      class="catalog__submit search-white-magnifier-dark-theme"
+    >
+      <svg width="48" height="48">
+        <use href="./svg/symbol-defs.svg#icon-searchd"></use>
+      </svg>
+    </button>
   </form>
-</div>
-<div class="container">
-  <ul class="card" id="movie-list"></ul>
-</div>
-<div id="pagination">
-  <button data-page="1">1</button>
-  <button data-page="2">2</button>
-  <button data-page="3">3</button>
+  <div class="catalog__content">
+    <ul class="catalog__list card" id="catalog-list"></ul>
+    <p
+      id="catalog-not-found-message"
+      class="catalog__message catalog__message--hidden"
+    >
+      There is no data satisfying your filters
+    </p>
+    <p
+      id="catalog-error-message"
+      class="catalog__message catalog__message--hidden"
+    >
+      Oops, something went wrong...<br />Please try again later.
+    </p>
+  </div>
 </div>
