@@ -13,17 +13,12 @@ async function getMovieDetails(id = 5) {
 }
 
 
-
-
-
-
 export async function startrenderModalInfo(id = 4) {
     const data = await getMovieDetails(id)
     console.log("DATA", data)
 
     await createModalInfo(data)
 }
-
 
 function createModalInfo(data) {
 
