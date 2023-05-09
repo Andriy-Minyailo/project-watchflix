@@ -4,11 +4,15 @@ import './js/modal';
 import './js/toggel';
 import './js/menu';
 
+import './js/modals-open-close';
+import './js/modalTrailer';
 import './js/hero';
 
 import './js/weekly-trends';
 
 import './js/upcoming';
+
+import './js/modals-open-close';
 
 
 
@@ -24,6 +28,9 @@ import './js/localModalJs';
 
 
 
-import { startRenderModalInfo } from './js/createModalInfo/createModalInfo';
 
-startRenderModalInfo(603691);
+
+
+
+
+import './js/footerModal';

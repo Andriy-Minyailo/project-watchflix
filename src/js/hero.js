@@ -1,5 +1,6 @@
-import { RequestServer } from "./requestServer";
+import { RequestServer } from './requestServer';
 import { markupHero } from './markupHero';
+import { applyWatchTraileListener } from './modalTrailer';
 
 const ref = {
     hero: document.getElementById("hero")
@@ -27,8 +28,10 @@ async function ontrendingDay() {
         heroTitle.classList.toggle('hero__title-light');
         heroText.classList.toggle('hero__text-light');
       })
+      applyWatchTraileListener();
     } catch(error) {
     console.log(error);
-  };
+  }
 }
+
 ontrendingDay();
