@@ -89,9 +89,12 @@ body.lock {
 
 .popup__content {}
 
-.btn__close {}
+.btn__close {
+  
+}
 
 .btn-input__close {
+  cursor: pointer;
   outline: none;
   background: none;
   color: white;
@@ -212,16 +215,17 @@ body.lock {
   color: #f8f8f8;
 }
 
-.btn__action {
-
+.btn__action { border-image: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
+  border-radius: 74px;
 }
 
 .btn__add-to-library {
-
-  border: 1px solid transparent;
+cursor: pointer;
+  border: 2px solid transparent;
   border-image: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
   border-image-slice: 1;
   background: black;
+  
 
 
   width: 140px;
