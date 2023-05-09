@@ -1,11 +1,24 @@
 import { RequestServer } from './requestServer';
+import { KEY_MOVIE_LIST } from "./localStorage";
+import { getMovieList } from "./localStorage";
+import { saveMovieList } from "./localStorage";
+import { loadMoveList } from "./localStorage";
 
 const loadingMessageEl = document.querySelector('#upcoming-loading-message');
 const noDataMessageEl = document.querySelector('#upcoming-no-data-message');
 const errorMessageEl = document.querySelector('#upcoming-error-message');
 const movieEl = document.querySelector('#upcoming-movie');
+const btn = document.querySelector('#upcoming-remind-btn');
 
 const requestServer = new RequestServer();
+let currenyMovie;
+let filmIndex;
+const stateButtonUpc = {
+    addText: 'Remind me',
+    removeText: 'Delete from my library',
+    localMarkup: '',
+    currentStateButton: true
+}
 
 const fetchUpcoming = async () => {
   try {
@@ -35,7 +48,10 @@ const fillData = async response => {
   }
 
   const movie = movies[Math.round(Math.random() * (moviesLength - 1))];
+ 
 
+
+  console.log(movie.id);
   fillTitle(movie.original_title);
   fillBackdrop(movie.backdrop_path);
   fillReleaseDate(movie.release_date);
@@ -45,6 +61,41 @@ const fillData = async response => {
   await fillGenre(movie);
 
   fillAbout(movie.overview);
+
+ const { poster_path,
+    original_title = '',
+    overview = '',
+    release_date = '',
+    vote_average = '',
+    id } = movie;
+
+  checkMovieLocalStorage(id);
+  const genreEl = document.querySelector('#upcoming-movie-genre');
+  const genreText = genreEl.innerText;
+  const genreTwo = genreText.split(',').slice(0, 2);
+   let releaseDate;
+        if (!release_date) {
+          releaseDate = 'no date';
+        } else {
+          releaseDate = release_date.substring(0, 4);
+        }
+        let path = `https://image.tmdb.org/t/p/w500${poster_path}`;
+        if (!poster_path) {
+          path = 'https://picsum.photos/500/750';
+        }
+      let rating = vote_average.toFixed(1);
+ stateButtonUpc.localMarkup = {
+        id: id,
+        str: `<img src='${path}' loading="lazy" alt="${overview}" class="card__img" />
+            <div class="container-info">
+            <h2 class="card__title">${original_title}</h2>
+            <p class="card__desc">${genreTwo} | ${releaseDate}</p>
+            <p class="card__rating">${rating}</p>
+            </div>`
+    };
+  console.log(stateButtonUpc.localMarkup);
+
+  
 };
 
 const hideLoadingMessage = () =>
@@ -117,3 +168,66 @@ const fillBackdrop = async backdropPath => {
 };
 
 fetchUpcoming();
+
+console.log(currenyMovie);
+
+
+
+
+function checkMovieLocalStorage(idFilm) {
+    const currentState = getMovieList(KEY_MOVIE_LIST);
+    // console.log(currentState);
+    if (!currentState) {
+        // const filmIndex = currentState.findIndex(obj => obj.id === Number(id));
+        btn.textContent = stateButtonUpc.addText;
+        stateButtonUpc.currentStateButton = true;
+        // console.log(filmIndex);
+        // console.log(stateButton.addText);
+        return;
+    }
+    // const [idLocalArray] = Object.keys(currentState);
+     filmIndex = currentState.findIndex(obj => obj.id === idFilm);
+   
+    // console.log(filmIndex);
+        if (filmIndex !== -1) {
+        btn.textContent = stateButtonUpc.removeText;
+        stateButtonUpc.currentStateButton = false;
+       
+        // console.log(stateButton.removeText);
+        } else {
+        btn.textContent = stateButtonUpc.addText;
+        stateButtonUpc.currentStateButton = true;
+        // console.log(filmIndex);
+        // console.log(stateButton.addText); 
+  }
+}
+btn.addEventListener('click', onLoadLocalStorage);
+     
+function onLoadLocalStorage(event) {
+   
+    console.log(stateButtonUpc.currentStateButton);
+    if (stateButtonUpc.currentStateButton) {
+        loadMoveList(stateButtonUpc.localMarkup);
+        stateButtonUpc.currentStateButton = false;
+        btn.textContent = stateButtonUpc.removeText;
+        console.log('add');
+    } else {
+        deleteLocalFilm(filmIndex);
+        stateButtonUpc.currentStateButton = true;
+        btn.textContent = stateButtonUpc.addText;
+        console.log('remove');
+        // checkLocalStorage(KEY_MOVIE_LIST);
+    }
+}
+
+
+function deleteLocalFilm(index) {
+    const currentState = getMovieList(KEY_MOVIE_LIST);
+    if (currentState.length === 1) {
+        localStorage.removeItem(KEY_MOVIE_LIST);
+        return;
+    }
+  currentState.splice(index, 1);
+  saveMovieList(KEY_MOVIE_LIST, currentState);
+  // checkLocalStorage();
+} 
