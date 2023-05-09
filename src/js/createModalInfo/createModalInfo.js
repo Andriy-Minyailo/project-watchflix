@@ -38,14 +38,14 @@ export async function startRenderModalInfo(id = 603692) {
 
 function createModalInfo(data) {
     const modal = document.querySelector(".modal-card-info")
-    const imgHTML = document.querySelector(".modal__img-true");
-    const nameFilmHTML = document.querySelector(".column__name");
-    const voteHTML = document.querySelector(".votes-1");
-    const votesHTML = document.querySelector(".votes-2");
-    const popolatityHTML = document.querySelector('.popularity-text')
-    const genreHTML = document.querySelector('.genre-text');
-    const aboutHTML = document.querySelector('.about-text');
-
+    const imgHTML = document.querySelector(".modal__img-modal-card-info");
+    const nameFilmHTML = document.querySelector(".modal-info__name");
+    const voteHTML = document.querySelector("._vote");
+    const votesHTML = document.querySelector("._votes");
+    const popolatityHTML = document.querySelector('.modal-info-right__text-popoparity')
+    const genreHTML = document.querySelector('.modal-info-right__text-genre');
+    const aboutHTML = document.querySelector('.modal-info-about__text-overwiew-about');
+    console.log("Abount",aboutHTML)
 
     const {
         id = 603692,
