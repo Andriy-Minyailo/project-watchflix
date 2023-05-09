@@ -14,23 +14,31 @@ async function handleTrailerClick(e) {
     const trailer = results[0];
 
     if (trailer) {
-      const player = document.getElementById('trailer-video-player');
       const noTrailerWrapper =
         document.getElementsByClassName('modal-no-trailer')[0];
       const trailerWrapper =
         document.getElementsByClassName('modal-trailer')[0];
 
-      let path = `https://www.youtube.com/embed/${trailer.key}`;
-      player.setAttribute('src', path);
-      player.setAttribute('title', trailer.name);
+      let html = `<iframe id="trailer-video-player" width="600" height="300" src="https://www.youtube.com/embed/${trailer.key}" title="${trailer.name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      trailerWrapper.innerHTML = html;
+
       noTrailerWrapper.classList.add('is-hidden');
       trailerWrapper.classList.remove('is-hidden');
     }
   } catch (error) {
     console.log(error);
   } finally {
-    modalListener('modal-2');
+    modalListener('modal-2', onModalTrailerClose);
   }
+}
+
+function onModalTrailerClose() {
+  const trailerWrapper = document.getElementsByClassName('modal-trailer')[0];
+  const noTrailerWrapper =
+    document.getElementsByClassName('modal-no-trailer')[0];
+  trailerWrapper.innerHTML = '';
+  noTrailerWrapper?.classList.remove('is-hidden');
+  trailerWrapper?.classList.add('is-hidden');
 }
 
 export function applyWatchTraileListener() {
