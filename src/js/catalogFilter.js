@@ -175,3 +175,12 @@ const handleSubmit = async event => {
 configureSelects();
 
 form.addEventListener('submit', handleSubmit);
+
+
+pagination.on('afterMove', async (event) => {
+  currentPage = event.page;
+  const movies = await fetchMovies(searchParams);
+  await renderMovies(movies);
+});
+
+let test = 0;
