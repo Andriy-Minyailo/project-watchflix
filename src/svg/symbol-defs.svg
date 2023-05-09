@@ -260,8 +260,17 @@
 <symbol id="icon-heart" viewBox="0 0 34 32">
 <path fill="#f87719" style="fill: var(--color1, #f87719)" d="M17.231 31.705l-2.412-2.412c-8.96-7.926-14.818-13.268-14.818-19.815 0-5.342 4.135-9.477 9.477-9.477 2.929 0 5.858 1.378 7.754 3.618 1.895-2.24 4.825-3.618 7.754-3.618 5.342 0 9.477 4.135 9.477 9.477 0 6.548-5.858 11.889-14.818 19.815l-2.412 2.412z"></path>
 </symbol>
-<symbol id="icon-close" viewBox="0 0 32 32">
-<path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.3333" d="M23 23l-14-14M23 9l-14 14"></path>
+<symbol id="icon-x" viewBox="0 0 32 32">
+<path d="M30 24.398l-8.406-8.398 8.406-8.398-5.602-5.602-8.398 8.402-8.402-8.402-5.598 5.602 8.398 8.398-8.398 8.398 5.598 5.602 8.402-8.402 8.398 8.402z"></path>
 </symbol>
+
+<symbol id="icon-sun_button" viewBox="0 0 16 16">
+    <path d="M8 13A5 5 0 1 0 8 3a5 5 0 0 0 0 10Z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m12.907 3.093.091-.091m-9.996 9.996.091-.091M8 1.056V1m0 14v-.056M1.056 8H1m14 0h-.056M3.093 3.093l-.091-.091m9.996 9.996-.091-.091" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-sun_moon" viewBox="0 0 15 15">
+    <path d="M1.026 7.774c.242 3.347 3.175 6.07 6.685 6.22 2.476.103 4.691-1.014 6.02-2.775.55-.722.255-1.203-.664-1.04-.45.078-.913.11-1.396.09-3.282-.13-5.967-2.787-5.98-5.926a5.624 5.624 0 0 1 .503-2.372c.362-.805-.074-1.189-.913-.844C2.623 2.212.805 4.805 1.026 7.774Z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
 </defs>
 </svg>

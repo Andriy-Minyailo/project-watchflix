@@ -20,6 +20,7 @@
   &__movie {
     display: flex;
     flex-direction: column;
+    padding-bottom: 40px;
 
     &-backdrop {
       display: block;
@@ -66,12 +67,12 @@
     &-stats-label {
       flex: 1;
       margin-right: 30px;
-      color: #b7b7b7;
+      // color: #b7b7b7;
     }
 
     &-stats-value {
       flex: 1;
-      color: #ffffff;
+      // color: #ffffff;
     }
 
     &-vote {
@@ -96,14 +97,14 @@
       @include font(16px, 500, 1.18, normal);
 
       margin-bottom: 16px;
-      color: #b7b7b7;
+      // color: #b7b7b7;
       text-transform: uppercase;
     }
 
     &-about-text {
       @include font(14px, 400, 1.4, normal);
 
-      color: #f8f8f8;
+      // color: #f8f8f8;
     }
 
     &--hidden {
@@ -113,6 +114,7 @@
 
   @include tablet {
     &__movie {
+      padding-bottom: 77px;
       &-title {
         @include font(28px, 500, 1.17, normal);
       }
@@ -148,6 +150,7 @@
     &__movie {
       flex-direction: row;
       align-items: flex-start;
+      padding-bottom: 100px;
 
       &-title {
         @include font(32px, 500, 1.18, normal);
