@@ -9,3 +9,5 @@ import './js/hero';
 import './js/weekly-trends';
 
 import './js/upcoming';
+
+import './js/modals-open-close';
