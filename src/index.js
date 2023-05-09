@@ -15,3 +15,15 @@ import './js/upcoming';
 import './js/localModalJs';
 
 
+
+
+
+
+
+
+
+
+
+import { startRenderModalInfo } from './js/createModalInfo/createModalInfo';
+
+startRenderModalInfo(603691);

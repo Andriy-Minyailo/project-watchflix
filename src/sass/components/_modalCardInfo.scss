@@ -1,11 +1,8 @@
 //===========================
 
-
-
 .wrapper {
   overflow: hidden;
   min-height: 100%;
-
 }
 
 body.lock {
@@ -13,11 +10,9 @@ body.lock {
   // padding-right: 17px;
 }
 
-
 .wrapper_blur {
   filter: blur(2px);
 }
-
 
 .popup {
   position: fixed;
@@ -43,36 +38,43 @@ body.lock {
   padding: 60px;
   // background-color: black;
   position: relative;
+  flex-direction: column;
 }
 
 .popup__content {
   position: relative;
-  max-width: 850px;
+  max-width: 280px;
+  height: 847px;
+
   
   border-radius: 20px;
-  padding: 60px;
+  padding: 0 16px 0 16px;
+  @media (min-width: 768px) {
+    
+    
+    }
+    @media (min-width: 1280px) {
+    
+      
+      }
 }
 
 .popup__content.light {
-  background-color: #fff;
+  background-color: #f5f5f5;
 }
 .popup__content.dark {
   background-color: #000;
 }
 
-
-
-
 .btn__close {
   position: absolute;
   top: 40;
   right: 40;
-
 }
 
 ._votes {
   display: flex;
-  gap: 0 10px
+  gap: 0 10px;
 }
 
 .votes-num {
@@ -91,8 +93,6 @@ body.lock {
 }
 //===========================
 .popup {
-
-
 }
 
 .popup__body {
@@ -103,9 +103,11 @@ body.lock {
   padding: 60px;
 }
 
-.popup__content {}
+.popup__content {
+}
 
-.btn__close {}
+.btn__close {
+}
 
 .btn-input__close {
   outline: none;
@@ -116,28 +118,39 @@ body.lock {
   height: 24px;
 }
 
-
-
 .modal__content {
   // position: relative;
-  display: flex;
+  flex-direction: column;
   gap: 0 20px;
+  @media (min-width: 768px) {
+    
+    display: flex;
+    }
+    @media (min-width: 1280px) {
+      display: flex;
+      
+      }
 }
 
-.modal__column {}
+.modal__column {
+}
 
 .modal__img {
-  width: 375px;
-  height: 478px;
+  width: 248px;
+  height: 315px;
+  @media (min-width: 768px) {
+    
+    width: 294px;
+    height: 400px;
+    }
+    @media (min-width: 1280px) {
+    
+      width: 375px;
+      height: 478px;
+      }
 }
 
 
-// @media (max-width: 900px) {
-//   .modal__img {
-//     width: 275px;
-//     height: 378px;
-//   }
-// }
 
 .modal__img-true {
   width: 100%;
@@ -154,7 +167,7 @@ body.lock {
 .discription {
   display: flex;
   flex-direction: column;
-  width: 330px
+  width: 330px;
 }
 
 .column__name {
@@ -162,8 +175,14 @@ body.lock {
   font-weight: 500;
   font-size: 24px;
   line-height: calc(32 / 24) * 100%;
-  color: #ffffff;
+
   margin-bottom: 30px;
+}
+.column__name.dark {
+  color: #ffffff;
+}
+.column__name.light {
+  color: #111111;
 }
 
 .column__list {
@@ -182,9 +201,12 @@ body.lock {
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16) * 100%;
-
-
+}
+.column__item.dark {
   color: #b7b7b7;
+}
+.column__item.light {
+  color: #111111;
 }
 
 .column__item-join {
@@ -197,17 +219,19 @@ body.lock {
 
 .column__item-white {
   font-family: 'Roboto';
+  font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: calc(19 / 16) * 100%;
+  line-height: 19px;
 
-
-  // display: flex;
-  // align-items: center;
-  // text-transform: uppercase;
-
-
-  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+.column__item-white.dark {
+  color: #ffffff;
+}
+.column__item-white.light {
+  color: #111111;
 }
 
 .column__about {
@@ -217,45 +241,64 @@ body.lock {
   line-height: 1;
   margin-bottom: 15px;
 
-
   display: flex;
   align-items: center;
   text-transform: uppercase;
-
-
-
+}
+.column__about.dark {
   color: #b7b7b7;
+}
+.column__about.light {
+  color: #111111;
 }
 
 .column__text {
   font-family: 'Roboto';
-  font-weight: 400;
-  font-size: 14px;
-  line-height: calc(20 / 14) * 100%;
-
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 20px;
+@media (min-width: 768px) {
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 20px;
+  }
+  @media (min-width: 1280px) {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    }
+}
+.column__text.dark {
   color: #f8f8f8;
+}
+.column__text.lifgt {
+  color: #111111;
 }
 
 .btn__action {
-
 }
 
 .btn__add-to-library {
-
   border: 1px solid transparent;
-  border-image: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
+  border-image: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
   border-image-slice: 1;
-  background: black;
-
 
   width: 140px;
   height: 40px;
 
   border-radius: 74px;
-
-
 }
-
+.btn__add-to-library.dark {
+  background: black;
+}
+.btn__add-to-library.light {
+  background: #f5f5f5;
+}
 
 .btn__text {
   text-align: center;
@@ -263,7 +306,10 @@ body.lock {
   font-weight: 500;
   font-size: 12px;
   line-height: calc(16 / 12) * 100%;
-
-
+}
+.btn__text.dark {
   color: #ffffff;
+}
+.btn__text.light {
+  color: #111111;
 }
