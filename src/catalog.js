@@ -10,3 +10,10 @@ import './js/localModalJs';
 import './js/catalogFilter';
 
 
+import { startRenderModalInfo } from './js/createModalInfo/createModalInfo';
+
+
+
+startRenderModalInfo(603691);
+
+

@@ -1,13 +1,20 @@
 //===========================
 
-// body.lock {
-//   overflow: hidden;
-// }
-// style="padding-right: 17px"
+
 
 .wrapper {
   overflow: hidden;
   min-height: 100%;
+
+}
+
+body.lock {
+  overflow: hidden;
+  // padding-right: 17px;
+}
+
+
+.wrapper_blur {
   filter: blur(2px);
 }
 
@@ -34,17 +41,26 @@
 
 .popup-body-content-wrapper {
   padding: 60px;
-  background-color: black;
+  // background-color: black;
   position: relative;
 }
 
 .popup__content {
   position: relative;
-  max-width: 960px;
-  background-color: black;
+  max-width: 850px;
+  
   border-radius: 20px;
   padding: 60px;
 }
+
+.popup__content.light {
+  background-color: #fff;
+}
+.popup__content.dark {
+  background-color: #000;
+}
+
+
 
 
 .btn__close {
@@ -114,6 +130,14 @@
   width: 375px;
   height: 478px;
 }
+
+
+// @media (max-width: 900px) {
+//   .modal__img {
+//     width: 275px;
+//     height: 378px;
+//   }
+// }
 
 .modal__img-true {
   width: 100%;
