@@ -24,7 +24,7 @@ export function markupHero(results) {
             <h2 class="hero__title">${original_title}</h2>
             <p class="hero__rating">${rating}</p>
             <p class="hero__text">${overview}</p>
-            <button class="hero__btn" type="button">Watch trailer</button>
+            <button id="watch-trailter__btn" data-id="${id}" class="hero__btn" type="button">Watch trailer</button>
             <div class="hero__slider">
             <button type="button">01</button>
             <button type="button">02</button>
