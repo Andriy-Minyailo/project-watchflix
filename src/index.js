@@ -10,6 +10,8 @@ import './js/weekly-trends';
 
 import './js/upcoming';
 
+import './js/modals-open-close';
+
 
 
 import './js/localModalJs';
@@ -22,5 +24,6 @@ import './js/localModalJs';
 
 
 import './js/footerModal';
+
 
 

@@ -16,6 +16,7 @@ export function markupHero(results) {
   }
 
   const { backdrop_path,
+
     original_title = '',
     overview = '',
     vote_average = '',
@@ -24,6 +25,7 @@ export function markupHero(results) {
   path = `https://image.tmdb.org/t/p/original${backdrop_path}`;      
   
         return `<div class="hero__discription">
+
             <h2 class="hero__title">${original_title}</h2>
             <p class="hero__rating">${vote_average}</p>
             <p class="hero__text">${overview}</p>
@@ -34,5 +36,4 @@ export function markupHero(results) {
             <img src='${path}' loading="lazy" alt="${overview}" class="hero__img" />
             </div>`;
 }
-
 
