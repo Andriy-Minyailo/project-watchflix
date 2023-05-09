@@ -1,39 +1,39 @@
+import desktop from '../img/upgrade/desktop.jpg';
+
 export function markupHero(results) {
-  console.log(results[2]);
-  const {
-    backdrop_path,
-    poster_path,
+  let result = results[Math.round(Math.random() * (results.length - 1))];
+  let path = '';
+  
+  if (!result) {
+    result = { original_title: 'Let’s Make Your Own Cinema',
+      overview: `Is a guide to creating a personalized movie theater experience. 
+        You'll need a projector, screen, and speakers. Decorate your space, choose your 
+        films, and stock up on snacks for the full experience.`,
+      vote_average: '',
+      id: ''
+    };
+    path = desktop;
+  }
+
+  const { backdrop_path,
+
     original_title = '',
     overview = '',
-    release_date = '',
     vote_average = '',
-    id,
-  } = results[1];
-  let releaseDate;
-  if (!release_date) {
-    releaseDate = 'no date';
-  } else {
-    releaseDate = release_date.substring(0, 4);
-  }
-  let path = `https://image.tmdb.org/t/p/w500${poster_path}`;
-  if (!poster_path) {
-    path = 'https://picsum.photos/500/750';
-  }
-  let rating = vote_average.toFixed(1);
-  return `<div class="hero__discription">
+    id } = result;
+  
+  path = `https://image.tmdb.org/t/p/original${backdrop_path}`;      
+  
+        return `<div class="hero__discription">
+
             <h2 class="hero__title">${original_title}</h2>
-            <p class="hero__rating">${rating}</p>
+            <p class="hero__rating">${vote_average}</p>
             <p class="hero__text">${overview}</p>
-            <button class="hero__btn" type="button">Watch trailer</button>
-            <div class="hero__slider">
-            <button type="button">01</button>
-            <button type="button">02</button>
-            <button type="button">03</button>
-            <button type="button">04</button>
-            <button type="button">05</button>
-            </div>
+            <button class="hero__btn watch-trailer-dark-theme" type="button">Watch trailer</button>
+            <div id="swiper" class="tui-pagination"></div>
             </div>
             <div class="hero__backgr" id="${id}">
             <img src='${path}' loading="lazy" alt="${overview}" class="hero__img" />
             </div>`;
 }
+
