@@ -1,3 +1,5 @@
+import desktop from '../img/upgrade/desktop.jpg';
+
 export function markupHero(results) {
   let result = results[Math.round(Math.random() * (results.length - 1))];
   let path = '';
@@ -10,7 +12,7 @@ export function markupHero(results) {
       vote_average: '',
       id: ''
     };
-    path = `../img/upgrade/desktop.jpg;`;
+    path = desktop;
   }
 
   const { backdrop_path,
@@ -26,13 +28,7 @@ export function markupHero(results) {
             <p class="hero__rating">${vote_average}</p>
             <p class="hero__text">${overview}</p>
             <button class="hero__btn watch-trailer-dark-theme" type="button">Watch trailer</button>
-            <div class="hero__slider">
-            <button type="button">01</button>
-            <button type="button">02</button>
-            <button type="button">03</button>
-            <button type="button">04</button>
-            <button type="button">05</button>
-            </div>
+            <div id="swiper" class="tui-pagination"></div>
             </div>
             <div class="hero__backgr" id="${id}">
             <img src='${path}' loading="lazy" alt="${overview}" class="hero__img" />
