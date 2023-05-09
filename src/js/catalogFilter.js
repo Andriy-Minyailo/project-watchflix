@@ -113,6 +113,8 @@ const searchParamsToQuery = params => {
   return query;
 };
 
+let totalItems = 0;
+
 const fetchMovies = async params => {
   try {
     const query = searchParamsToQuery(params);
