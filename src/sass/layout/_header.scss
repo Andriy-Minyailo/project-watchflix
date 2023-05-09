@@ -54,6 +54,13 @@
 .header-nav-item {
   padding-right: 40px;
 }
+
+.header-link:hover {
+  transition: color 0.2s ease;
+  color: #F87719;
+}
+
+
 .header-link {
   font-weight: 500;
   font-size: 14px;
@@ -195,3 +202,10 @@ padding-top: 20px;
 .mob-menu-link {
   color: #B7B7B7;
 }
+
+
+.current a {
+  color: #F87719;
+}
+
+
