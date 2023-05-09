@@ -4,6 +4,8 @@ import './js/modal';
 import './js/toggel';
 import './js/menu';
 
+import './js/modals-open-close';
+import './js/modalTrailer';
 import './js/hero';
 
 import './js/weekly-trends';
@@ -24,6 +26,3 @@ import './js/localModalJs';
 
 
 import './js/footerModal';
-
-
-
