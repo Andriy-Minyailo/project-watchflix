@@ -343,3 +343,13 @@
         // padding-bottom: 95px;
   }
 }
+
+.load-more {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-top: 24px;
+  @include tablet {
+    margin-top: 40px;
+  }
+}
