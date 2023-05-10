@@ -368,9 +368,10 @@ configureSelects();
 
 form.addEventListener('submit', handleSubmit);
 
-
+console.log()
 pagination.on('afterMove', async (event) => {
   currentPage = event.page;
+  
   const movies = await fetchMovies(searchParams);
   await renderMovies(movies);
 });
