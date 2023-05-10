@@ -58,7 +58,7 @@ function createModalInfo(data) {
         overview = ""
     } = data
 
-    img = "https://image.tmdb.org/t/p/original" + poster_path;
+    img = "https://image.tmdb.org/t/p/w500" + poster_path;
 
 
 
