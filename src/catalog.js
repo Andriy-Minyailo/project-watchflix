@@ -7,4 +7,3 @@ import './js/catalogFilter';
 import './js/modals-open-close';
 import './js/modalTrailer';
 import './js/footerModal';
-
