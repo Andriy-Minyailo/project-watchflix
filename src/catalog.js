@@ -13,8 +13,8 @@ import './js/catalogFilter';
 import { startRenderModalInfo } from './js/createModalInfo/createModalInfo';
 
 
-
 startRenderModalInfo(603692);
+import './js/createModalInfo/toggleModalCardInfo'
 
 
 import './js/modals-open-close';

@@ -1,6 +1,5 @@
 import {RequestServer} from "../requestServer"
 
-
 const requestServer = new RequestServer();
 
 const wrapper = document.querySelector(".wrapper");
@@ -12,7 +11,7 @@ const utils = {
     localStorage: getLocalStorage(KEY_LOCALSTORAGE) ?  transformJSONtoObj(getLocalStorage(KEY_LOCALSTORAGE)) : []
 }
 
-console.log("text", utils.localStorage)
+
 
 if (utils.localStorage.length == 0) {
     addToLocalStorage(KEY_LOCALSTORAGE, transformObjToJSON([]))
@@ -45,7 +44,7 @@ function createModalInfo(data) {
     const popolatityHTML = document.querySelector('.modal-info-right__text-popoparity')
     const genreHTML = document.querySelector('.modal-info-right__text-genre');
     const aboutHTML = document.querySelector('.modal-info-about__text-overwiew-about');
-    console.log("Abount",aboutHTML)
+    
 
     const {
         id = 603692,

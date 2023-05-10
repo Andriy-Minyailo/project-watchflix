@@ -14,11 +14,11 @@
 //   background-color: #000;
 // }
 
-// .btn__close {
-//   position: absolute;
-//   top: 40;
-//   right: 40;
-// }
+.btn__close {
+  position: absolute;
+  top: 40;
+  right: 40;
+}
 
 
 // //===========================
@@ -101,7 +101,9 @@
   overflow-x: hidden;
   z-index: 100000;
 
- 
+ @media (max-width: 321px) {
+  margin-bottom: -20px;
+ }
 }
 
 .modal-card-info {
@@ -133,21 +135,31 @@ body.lock {
   background-color:  #000;
   border-radius: 20px;
   padding: 60px;
+
+
+  &.light {
+    background-color:  #fff;
+  }
 }
+
+
+
 //============== MODAL_CONTENT
 
 .modal__content {
   display: flex;
   // flex-wrap: wrap;
   gap: 0 20px;
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     & {
       flex-direction: column;
+      gap: 20px 0;
     }
   }
-  @media (max-width: 320px) {
+  @media (max-width: 321px) {
     & {
       flex-direction: column;
+      gap: 20px 0;
     }
   }
 }
@@ -197,7 +209,12 @@ body.lock {
   flex-direction: column;
   color:#FFFFFF;
   margin-bottom: 25px;
+
+  &.light {
+    color: #111;
+  }
 }
+
 
 
 .modal-info__name {
@@ -206,6 +223,14 @@ body.lock {
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 28px;
+
+  @media (max-width: 767px) {
+    line-height: 28px;
+  }
+  @media (max-width: 321px) {
+    font-size: 20px;
+    line-height: 23px;
+  }
 }
 
 
@@ -231,6 +256,20 @@ body.lock {
   font-size: 16px;
   line-height: 19px;
   color: getColor("grey");
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  @media (max-width: 321px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+
+  &.light {
+    color: #282828;
+  }
 }
 
 .modal-info-vote-right { 
@@ -248,6 +287,12 @@ body.lock {
   background-color: getColor("primary");
   border-radius: 5px;
   padding: 1px 8px;
+
+
+
+  &.light {
+    background-color:  #F87719;
+  }
 }
 
 ._votes {
@@ -260,8 +305,34 @@ body.lock {
   background-color: getColor("primary");
   border-radius: 5px;
   padding: 1px 8px;
+  &.light {
+    background-color:  #F87719;
+  }
 }
 
+._vote,
+._votes {
+  @media (max-width: 767px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  @media (max-width: 321px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.modal-info-vote-right__text-slesh{ 
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  @media (max-width: 767px) {
+    line-height: 1;
+  }
+  @media (max-width: 321px) {
+    line-height: 1;
+  }
+}
 // ================== VOTE VOTES
 
 
@@ -274,6 +345,16 @@ body.lock {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+  @media (max-width: 321px) {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+
 }
 
 .modal-info-about__text-title-about {
@@ -283,6 +364,14 @@ body.lock {
   font-size: 16px;
   line-height: 1;
   margin-bottom: 15px;
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+  @media (max-width: 321px) {
+    font-size: 14px;
+    line-height: 1.1;
+  }
 }
 
 
@@ -291,11 +380,20 @@ body.lock {
 // ================== GENRE
 
 
-.modal-info-right__text-genr {
+.modal-info-right__text-genre {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+  @media (max-width: 321px) {
+    font-size: 14px;
+    line-height: 1.1;
+  }
 }
 
 .modal-info-about__text-overwiew-about { 
@@ -303,7 +401,16 @@ body.lock {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
+
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+  @media (max-width: 321px) {
+    font-size: 12px;
+  }
 }
+
 // ================== GENRE
 
 // ================== ABOUT
@@ -312,6 +419,9 @@ body.lock {
 
 .modal-info__about {  
   color: getColor('secondaryText');
+  &.light {
+    color: #111;
+  }
 }
 
 
@@ -320,7 +430,34 @@ body.lock {
 
 
 //============== MODAL_CONTENT INFO
+.btn__add-to-library {
+
+  &.light {
+    background-color: rgba(248, 248, 248, 1);
+    color: #111;
+  }
+}
 
 
+//============================================
 
+.modal__close-btn {
+  
 
+  @media (max-width: 767px) {
+    top: 40px;
+    right: 40px;
+    
+  }
+  @media (max-width: 321px) {
+    position: static;
+    // justify-content: flex-end;
+    // margin-top: 60px;
+    .img-cls {
+      position: absolute;
+      right: 40px;
+
+    }
+    
+  }
+}
