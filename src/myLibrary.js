@@ -13,3 +13,5 @@ import './js/checkLocalStorage'
 
 
 import './js/localModalJs';
+
+import './js/modals-open-close';

@@ -3,6 +3,7 @@ import { saveMovieList } from "./localStorage";
 import { loadMoveList } from "./localStorage";
 import { KEY_MOVIE_LIST } from "./localStorage";
 import { checkLocalStorage } from "./checkLocalStorage";
+import {startRenderModalInfo} from './createModalInfo/createModalInfo'
 
 // let localMarkup;
 let filmIndex;
@@ -19,7 +20,7 @@ const stateButton = {
     currentStateButton: true
 }
 
-// refs.card.addEventListener('click', onLoadModal);
+refs.card.addEventListener('click', onLoadModal);
 
 function onLoadModal(event) {
     const { id } = event.target.offsetParent;
@@ -29,7 +30,8 @@ function onLoadModal(event) {
         id: id,
         str: event.target.offsetParent.innerHTML
     };
-    checkFilmLocalStorage(id); 
+    checkFilmLocalStorage(id);
+    startRenderModalInfo(id);
      }
 
 function checkFilmLocalStorage(idFilm) {
@@ -60,7 +62,7 @@ function checkFilmLocalStorage(idFilm) {
   }
     }
 
-// refs.btnModalInfo.addEventListener('click', onLoadLocalStorage);
+refs.btnModalInfo.addEventListener('click', onLoadLocalStorage);
 
 function onLoadLocalStorage(event) {
    
