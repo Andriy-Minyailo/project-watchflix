@@ -1,8 +1,8 @@
-import {RequestServer} from "../requestServer"
+import { RequestServer } from "../requestServer";
 
 const requestServer = new RequestServer();
 
-const wrapper = document.querySelector(".wrapper");
+// const wrapper = document.querySelector(".wrapper");
 
 // const KEY_LOCALSTORAGE = "my-library"
 
@@ -77,7 +77,7 @@ function createModalInfo(data) {
 
 
 
-import './toggleModalCardInfo'
+// import './toggleModalCardInfo'
 // function btnAddToLocalStorage() {
 //     const btn = document.querySelector(".btn__add-to-library");
 
