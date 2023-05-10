@@ -183,4 +183,3 @@ pagination.on('afterMove', async (event) => {
   await renderMovies(movies);
 });
 
-let test = 0;
