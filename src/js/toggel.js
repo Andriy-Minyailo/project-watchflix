@@ -47,3 +47,29 @@ LightSwitcher.onclick = function () {
   if (currentLink) {
     currentLink.parentElement.classList.add('current');
   }
+
+
+  const menuButton = document.getElementById('menu-button');
+const menuContainer = document.querySelector('.mob-menu');
+const overlay = document.getElementById('overlay');
+const body = document.querySelector('body');
+
+// открытие мобильного меню
+menuButton.addEventListener('click', () => {
+  menuContainer.style.left = '0';
+  overlay.style.display = 'block';
+  body.style.overflow = 'hidden';
+  overlay.style.visibility = 'visible';
+  menuContainer.querySelectorAll('a').forEach(link => link.style.display = 'block');
+});
+
+// закрытие мобильного меню и скрытие overlay
+overlay.addEventListener('click', () => {
+  menuContainer.style.left = '-64%';
+  overlay.style.display = 'none';
+  body.style.overflow = 'auto';
+  overlay.style.visibility = 'hidden';
+  menuContainer.querySelectorAll('a').forEach(link => link.style.display = 'none');
+});
+
+
