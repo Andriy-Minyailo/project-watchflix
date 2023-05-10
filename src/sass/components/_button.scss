@@ -2,10 +2,10 @@
 
 // <h1>Загальні кнопки</h1>
 
-//<div style="margin: 15px"><button type="button" class="load-more-dark-theme">Load more</button></div>
-//<div style="margin: 15px"><button type="button" class="search-movie-dark-theme">Search movie</button></div>
-//<div style="margin: 15px"><button type="button" class="watch-trailer-dark-theme">Watch trailer</button></div>
-//<div style="margin: 15px"><button type="button" class="remind-me-dark-theme">Remind me</button></div>
+//<div style="margin: 15px"><button type="button" class="load-more">Load more</button></div>
+//<div style="margin: 15px"><button type="button" class="search-movie">Search movie</button></div>
+//<div style="margin: 15px"><button type="button" class="watch-trailer">Watch trailer</button></div>
+//<div style="margin: 15px"><button type="button" class="remind-me">Remind me</button></div>
 
 // <h3>Стилі бекграунду для search btn</h3>
 // <div style="margin: 15px"> <button type="button" class="search-btn"></button></div>
@@ -62,8 +62,8 @@
     @include font(16px, 500, 24px, 0em);
   }
 
-  &:hover,
-  &:focus {
+  &:active,
+  &:hover {
     background: linear-gradient(
       141.22deg,
       #f84119 9.4%,
@@ -104,8 +104,8 @@
     @include font(18px, 500, 28px, 0em);
   }
 
-  &:hover,
-  &:focus {
+  &:active,
+  &:hover {
     background: linear-gradient(
       141.22deg,
       #f84119 9.4%,
@@ -149,8 +149,8 @@
     @include font(16px, 500, 24px, 0em);
   }
 
-  &:hover,
-  &:focus {
+  &:active,
+  &:hover {
     background: linear-gradient(
       141.22deg,
       #f84119 9.4%,
@@ -191,8 +191,8 @@
     @include font(14px, 500, 16px, 0em);
   }
 
-  &:hover,
-  &:focus {
+  &:active,
+  &:hover {
     background: linear-gradient(
       141.22deg,
       #f84119 9.4%,
@@ -225,8 +225,8 @@
     width: 48px;
   }
 
-  &:hover,
-  &:focus {
+  &:active,
+  &:hover {
     background: linear-gradient(
       141.22deg,
       #f84119 9.4%,
@@ -380,8 +380,8 @@
     @include font(14px, 400, 14px, 0em);
   }
 
-  &:hover,
-  &:focus {
+  &:active,
+  &:hover {
     background: linear-gradient(
       141.22deg,
       #f84119 9.4%,
@@ -568,8 +568,8 @@
     @include font(14px, 400, 14px, 0em);
   }
 
-  &:hover,
-  &:focus {
+  &:active,
+  &:hover {
     background: linear-gradient(
       141.22deg,
       #f84119 9.4%,
