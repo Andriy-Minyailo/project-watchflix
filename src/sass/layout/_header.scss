@@ -251,6 +251,15 @@ body {
   margin-left: 20px;
 }
 
+.mob-menu.light {
+  background-color: #FFFFFF;
+
+  .mob-menu-link {
+    color: #111111;
+  }
+}
+
+
 // curent
 .current a {
   color: #F87719;

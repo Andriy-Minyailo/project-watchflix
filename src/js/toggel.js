@@ -27,13 +27,16 @@ let isLight = localStorage.getItem('isLight');
 
 if (isLight === 'true') {
   document.body.classList.add('light');
+  document.querySelector('.mob-menu').classList.add('light');
 }
 
 LightSwitcher.onclick = function () {
   document.body.classList.toggle('light');
+  document.querySelector('.mob-menu').classList.toggle('light');
   isLight = document.body.classList.contains('light');
   localStorage.setItem('isLight', isLight);
 };
+
 
 //* C U R R E N T   P A G E
 
