@@ -31,6 +31,7 @@ if (isLight === 'true') {
 }
 
 LightSwitcher.onclick = function () {
+  
   document.body.classList.toggle('light');
   document.querySelector('.mob-menu').classList.toggle('light');
   isLight = document.body.classList.contains('light');

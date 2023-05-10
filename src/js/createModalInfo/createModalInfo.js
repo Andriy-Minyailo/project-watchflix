@@ -1,6 +1,5 @@
 import {RequestServer} from "../requestServer"
 
-
 const requestServer = new RequestServer();
 
 const wrapper = document.querySelector(".wrapper");
@@ -45,7 +44,7 @@ function createModalInfo(data) {
     const popolatityHTML = document.querySelector('.modal-info-right__text-popoparity')
     const genreHTML = document.querySelector('.modal-info-right__text-genre');
     const aboutHTML = document.querySelector('.modal-info-about__text-overwiew-about');
-    console.log("Abount",aboutHTML)
+    
 
     const {
         id = 603692,
@@ -78,7 +77,7 @@ function createModalInfo(data) {
 
 
 
-
+import './toggleModalCardInfo'
 // function btnAddToLocalStorage() {
 //     const btn = document.querySelector(".btn__add-to-library");
 
