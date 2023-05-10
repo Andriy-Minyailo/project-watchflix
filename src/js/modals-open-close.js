@@ -36,7 +36,8 @@ export function modalListener(modalId, onClose) {
 }
 
 modalRefs.openModalBtns.forEach(button => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (e) => {
     modalListener(button.dataset.modalOpen);
+    console.log(e.currentTarget);
   });
 });

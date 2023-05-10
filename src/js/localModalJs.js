@@ -4,7 +4,7 @@ import { loadMoveList } from "./localStorage";
 import { KEY_MOVIE_LIST } from "./localStorage";
 import { checkLocalStorage } from "./checkLocalStorage";
 import {startRenderModalInfo} from './createModalInfo/createModalInfo'
-
+import { modalListener } from './modals-open-close';
 // let localMarkup;
 let filmIndex;
 
@@ -26,12 +26,14 @@ function onLoadModal(event) {
     const { id } = event.target.offsetParent;
     // console.log(event.target.offsetParent.innerHTML);
     if (!id) { return };
+    const idNum = Number(id);
     stateButton.localMarkup = {
-        id: id,
+        id: idNum,
         str: event.target.offsetParent.innerHTML
     };
-    checkFilmLocalStorage(id);
-    startRenderModalInfo(id);
+    checkFilmLocalStorage(idNum);
+    startRenderModalInfo(idNum);
+    modalListener('modal-1');
      }
 
 function checkFilmLocalStorage(idFilm) {

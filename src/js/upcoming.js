@@ -201,7 +201,9 @@ function checkMovieLocalStorage(idFilm) {
         // console.log(stateButton.addText); 
   }
 }
-btn.addEventListener('click', onLoadLocalStorage);
+if (btn) {
+  btn.addEventListener('click', onLoadLocalStorage);
+}
      
 function onLoadLocalStorage(event) {
    
