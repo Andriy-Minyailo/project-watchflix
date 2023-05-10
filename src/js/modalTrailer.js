@@ -19,7 +19,7 @@ async function handleTrailerClick(e) {
       const trailerWrapper =
         document.getElementsByClassName('modal-trailer')[0];
 
-      let html = `<iframe id="trailer-video-player" width="600" height="300" src="https://www.youtube.com/embed/${trailer.key}" title="${trailer.name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      let html = `<iframe id="trailer-video-player" width="100%" height="100%" src="https://www.youtube.com/embed/${trailer.key}" title="${trailer.name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
       trailerWrapper.innerHTML = html;
 
       noTrailerWrapper.classList.add('is-hidden');

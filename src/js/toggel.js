@@ -37,17 +37,13 @@ LightSwitcher.onclick = function () {
 
 //* C U R R E N T   P A G E
 
-// Отримати URL поточної сторінки
-var currentUrl = window.location.href;
+  // Получаем путь текущей страницы
+  var path = window.location.pathname;
 
-// Отримати всі елементи посилань у списку
-var navLinks = document.querySelectorAll('.header__nav-link, .mobile-menu__link');
+  // Находим ссылку в меню навигации, которая ведет на текущую страницу
+  var currentLink = document.querySelector('.header-nav-item a[href="' + path + '"]');
 
-// Пройтись по кожному елементу посилання
-navLinks.forEach(function(link) {
-  // Перевірити, чи співпадає URL посилання з поточним URL
-  if (link.href === currentUrl) {
-    // Додати клас до елементу посилання
-    link.classList.add('link__current');
+  // Если такая ссылка есть, добавляем ей класс "current"
+  if (currentLink) {
+    currentLink.parentElement.classList.add('current');
   }
-});

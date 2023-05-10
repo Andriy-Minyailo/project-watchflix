@@ -4,7 +4,7 @@ import { loadMoveList } from "./localStorage";
 import { KEY_MOVIE_LIST } from "./localStorage";
 import { checkLocalStorage } from "./checkLocalStorage";
 
-let localMarkup;
+// let localMarkup;
 let filmIndex;
 
 const refs = {
@@ -14,8 +14,8 @@ const refs = {
 }
 const stateButton = {
     addText: 'Add to my library',
-    removeText: 'remove to my library',
-    localMarkup,
+    removeText: 'Delete from my library',
+    localMarkup: '',
     currentStateButton: true
 }
 
