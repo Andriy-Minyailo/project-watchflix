@@ -1,3 +1,4 @@
+
 // Розмітка index.html для перевірки
 
 // <h1>Загальні кнопки</h1>
@@ -23,6 +24,7 @@
 // <div style="margin: 15px"><button type="button" class="remove-from-my-library-white-btn-light-theme">Remove from my library</button></div>
 // <div style="margin: 15px"><button type="button" class="add-to-my-library-white-btn-light-theme">Add to my library</button></div>
 //<div style="margin: 15px"><button type="button" class="search-black-magnifier-light-theme"></button></div>
+
 //     <div style="margin: 15px"><button type="button" class="pagination-active-light-theme">5</button></div>
 //<div style="margin: 15px"><button type="button" class="pagination-light-theme">5</button></div>
 
@@ -151,11 +153,13 @@
 
   &:active,
   &:hover {
+
     background: linear-gradient(
       141.22deg,
       #f84119 9.4%,
       rgba(248, 159, 25, 0.68) 91.91%
     );
+
   }
 }
 
@@ -191,13 +195,16 @@
     @include font(14px, 500, 16px, 0em);
   }
 
+
   &:active,
   &:hover {
+
     background: linear-gradient(
       141.22deg,
       #f84119 9.4%,
       rgba(248, 159, 25, 0.68) 91.91%
     );
+
   }
 }
 
@@ -242,9 +249,12 @@
 
   // box-shadow: inset 0px 0px 0px 100vw rgba(17, 17, 17, 1);
 
+
   background-color: black;
   color: rgba(248, 248, 248, 1);
+
   cursor: pointer;
+
   height: 38px;
   min-width: 106px;
   left: 16px;
@@ -280,15 +290,18 @@
   }
 }
 
+
 .add-to-my-library-black-btn-dark-theme {
+
   background-color: #f84119;
   // Для отримання бордер градієнту розкоментувати  і дивись властивість border:
   //  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
   // box-shadow: inset 0px 0px 0px 100vw rgba(17, 17, 17, 1);
-
   background-color: black;
   color: rgba(248, 248, 248, 1);
+
   cursor: pointer;
+
   height: 38px;
   min-width: 106px;
   left: 16px;
@@ -326,9 +339,12 @@
 
 .search-white-magnifier-dark-theme {
   background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+
   background-image: url('/src/svg/Icon_button_white.svg');
   background-position: center;
+
   cursor: pointer;
+
   height: 40px;
   width: 40px;
   border: none;
@@ -342,7 +358,9 @@
   }
 
   @media screen and (min-width: 1280px) {
+
     height: 48px;
+
     width: 48px;
   }
 
@@ -351,6 +369,7 @@
     border: 1px solid rgb(62, 62, 62);
   }
 }
+
 
 .pagination-active-dark-theme {
   background: transparent;
@@ -517,13 +536,18 @@
   background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
   background-image: url('/src/svg/Icon_button_black.svg');
   background-position: center;
+
   cursor: pointer;
+
   height: 40px;
   width: 40px;
   border: none;
   left: 2643px;
   top: 3845px;
   border-radius: 50px;
+
+
+
 
   @media screen and (min-width: 768px) {
     height: 44px;
@@ -540,6 +564,7 @@
     border: 1px solid rgba(255, 194, 38, 1);
   }
 }
+
 
 .pagination-active-light-theme {
   background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
@@ -611,3 +636,4 @@
     color: #8f8f8f;
   }
 }
+

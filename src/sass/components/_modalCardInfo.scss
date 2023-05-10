@@ -1,0 +1,326 @@
+// //===========================
+
+
+
+
+
+
+
+
+// .popup__content.light {
+//   background-color: #f5f5f5;
+// }
+// .popup__content.dark {
+//   background-color: #000;
+// }
+
+// .btn__close {
+//   position: absolute;
+//   top: 40;
+//   right: 40;
+// }
+
+
+// //===========================
+
+// .btn-input__close {
+//   outline: none;
+//   background: none;
+//   color: white;
+//   border: none;
+//   width: 24px;
+//   height: 24px;
+// }
+
+
+// .column__name.dark {
+//   color: #ffffff;
+// }
+// .column__name.light {
+//   color: #111111;
+// }
+
+
+// // .btn__action {
+// // }
+
+// // .btn__add-to-library {
+// //   border: 1px solid transparent;
+// //   border-image: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+// //   border-image-slice: 1;
+
+// //   width: 140px;
+// //   height: 40px;
+
+// //   border-radius: 74px;
+// // }
+// // .btn__add-to-library.dark {
+// //   background: black;
+// // }
+// // .btn__add-to-library.light {
+// //   background: #f5f5f5;
+// // }
+
+// // .btn__text {
+// //   text-align: center;
+// //   font-family: 'Roboto';
+// //   font-weight: 500;
+// //   font-size: 12px;
+// //   line-height: calc(16 / 12) * 100%;
+// // }
+// // .btn__text.dark {
+// //   color: #ffffff;
+// // }
+// // .btn__text.light {
+// //   color: #111111;
+// // }
+
+
+
+
+
+// ================================NEW STYLE=====================================
+
+
+// body.lock {
+//   overflow: hidden;
+//   // padding-right: 17px;
+// }
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top:0;
+  left: 0;
+  
+  opacity: 1;
+  visibility: visible;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 100000;
+
+ 
+}
+
+.modal-card-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body.lock {
+  overflow: hidden;
+  // padding-right: 17px;
+}
+
+
+
+.popup__content {
+  
+  position: relative;
+
+  max-width: 850px;
+  background-color:  #000;
+  border-radius: 20px;
+  padding: 60px;
+}
+//============== MODAL_CONTENT
+
+.modal__content {
+  display: flex;
+  // flex-wrap: wrap;
+  gap: 0 20px;
+  @media (max-width: 768px) {
+    & {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 320px) {
+    & {
+      flex-direction: column;
+    }
+  }
+}
+
+
+
+//============== MODAL_CONTENT
+
+//============== MODAL_CONTENT IMG 
+
+.modal-img-wrapper {
+  width: 375px;
+  height: 478px;
+
+  @media (max-width: 768px) {
+    & {
+      width: 294px;
+      height: 400px;
+    }
+  }
+  @media (max-width: 768px) {
+    & {
+      width: 248px;
+      height: 315px;
+    }
+  }
+
+}
+
+.modal__img-modal-card-info {
+  width: 100%;
+  height: 100%;
+  // background-size: cover;
+}
+
+//============== MODAL_CONTENT IMG
+
+
+//============== MODAL_CONTENT INFO
+
+.flex{ 
+  flex: 1 1 50%
+}
+
+.modal__info {
+  display: flex;
+  flex-direction: column;
+  color:#FFFFFF;
+  margin-bottom: 25px;
+}
+
+
+.modal-info__name {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 28px;
+}
+
+
+.modal-info__list { 
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 14px 0;
+}
+
+
+.modal-info__item {
+  display: flex;
+}
+
+// ================== VOTE VOTES
+
+
+
+ .text-left {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: getColor("grey");
+}
+
+.modal-info-vote-right { 
+  display:flex;
+  gap: 0 5px;
+}
+
+._vote {
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  color: getColor('backgroundSecondary');
+  background-color: getColor("primary");
+  border-radius: 5px;
+  padding: 1px 8px;
+}
+
+._votes {
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  color: getColor('backgroundSecondary');
+  background-color: getColor("primary");
+  border-radius: 5px;
+  padding: 1px 8px;
+}
+
+// ================== VOTE VOTES
+
+
+
+
+// ================== POPULARITY
+
+.modal-info-right__text-popoparity  {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.modal-info-about__text-title-about {
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+
+// ================== POPULARITY
+
+// ================== GENRE
+
+
+.modal-info-right__text-genr {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.modal-info-about__text-overwiew-about { 
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+// ================== GENRE
+
+// ================== ABOUT
+
+
+
+.modal-info__about {  
+  color: getColor('secondaryText');
+}
+
+
+// ================== ABOUT
+
+
+
+//============== MODAL_CONTENT INFO
+
+
+
+
