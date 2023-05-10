@@ -410,6 +410,9 @@
 
 .pagination-dark-theme {
   background: transparent;
+      display: flex;
+        align-items: center;
+        justify-content: center;
 
   border: 1px solid #b7b7b7;
   color: rgba(248, 248, 248, 1);
@@ -636,3 +639,24 @@
   }
 }
 
+.tui-pagination{
+  height: 40px;
+    justify-content: center;
+    display: flex;
+  }
+
+  .tui-prev {
+    background-image: url(../img/upgrade/logo-mobile.png);
+  }
+
+  .tui-next {
+    background-image: url(../img/upgrade/logo-mobile.png);
+  }
+
+    .tui-last {
+      background-image: url(../img/upgrade/logo-mobile.png);
+    }
+
+.tui-first {
+  background-image: url(../img/upgrade/logo-mobile.png);
+}

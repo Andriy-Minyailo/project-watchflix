@@ -10,19 +10,19 @@ const options = {
   firstItemClassName: 'tui-first-child',
   lastItemClassName: 'tui-last-child',
   template: {
-    page: '<a href="#" class="tui-page-btn">{{page}}</a>',
+    page: '<a href="#" class="tui-page-btn pagination-dark-theme">{{page}}</a>',
     currentPage:
-      '<strong class="tui-page-btn tui-is-selected">{{page}}</strong>',
+      '<strong class="tui-page-btn pagination-dark-theme pagination-active-dark-theme">{{page}}</strong>',
     moveButton:
-      '<a href="#" class="tui-page-btn tui-{{type}}">' +
-      '<span class="tui-ico-{{type}}"></span>' +
+      '<a href="#" class="tui-page-btn pagination-dark-theme tui-{{type}}">' +
+      '<span class="pagination-dark-theme tui-ico-{{type}}"></span>' +
       '</a>',
     disabledMoveButton:
-      '<span class="tui-page-btn tui-is-disabled tui-{{type}}">' +
+      '<span class="tui-page-btn pagination-dark-theme tui-is-disabled tui-{{type}}">' +
       '<span class="tui-ico-{{type}}"></span>' +
       '</span>',
     moreButton:
-      '<a href="#" class="tui-page-btn tui-{{type}}-is-ellip">...</a>',
+      '<a href="#" class="tui-page-btn pagination-dark-theme tui-{{type}}-is-ellip">...</a>',
   },
 };
 export const pagination = new Pagination(container, options);
