@@ -2,6 +2,7 @@ import { RequestServer } from './requestServer';
 import { markup } from './markup';
 import { requestGenre } from './nameGenres';
 
+
 const refs = {
   weeklyCard: document.querySelector('.card'),
 };
@@ -15,6 +16,7 @@ async function weeklyTrend() {
     const markupCard = markup(results.slice(0, 3));
 
     refs.weeklyCard.innerHTML = markupCard;
+    
   } catch (error) {
     console.log(error);
   }

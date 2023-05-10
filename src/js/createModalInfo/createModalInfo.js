@@ -5,18 +5,18 @@ const requestServer = new RequestServer();
 
 const wrapper = document.querySelector(".wrapper");
 
-const KEY_LOCALSTORAGE = "my-library"
+// const KEY_LOCALSTORAGE = "my-library"
 
-const utils = {
-    cardsInfo: [],
-    localStorage: getLocalStorage(KEY_LOCALSTORAGE) ?  transformJSONtoObj(getLocalStorage(KEY_LOCALSTORAGE)) : []
-}
+// const utils = {
+//     cardsInfo: [],
+//     localStorage: getLocalStorage(KEY_LOCALSTORAGE) ?  transformJSONtoObj(getLocalStorage(KEY_LOCALSTORAGE)) : []
+// }
 
-console.log("text", utils.localStorage)
+// console.log("text", utils.localStorage)
 
-if (utils.localStorage.length == 0) {
-    addToLocalStorage(KEY_LOCALSTORAGE, transformObjToJSON([]))
-}
+// if (utils.localStorage.length == 0) {
+//     addToLocalStorage(KEY_LOCALSTORAGE, transformObjToJSON([]))
+// }
 
 
 
@@ -30,10 +30,10 @@ export async function startRenderModalInfo(id = 603692) {
     const data = await getMovieDetails(id)
     console.log("DATA", data)
 
-    utils.cardsInfo.push(data)
+    // utils.cardsInfo.push(data)
 
-    await createModalInfo(data)
-    await btnAddToLocalStorage()
+    createModalInfo(data);
+    // await btnAddToLocalStorage()
 }
 
 function createModalInfo(data) {
@@ -79,77 +79,77 @@ function createModalInfo(data) {
 
 
 
-function btnAddToLocalStorage() {
-    const btn = document.querySelector(".btn__add-to-library");
+// function btnAddToLocalStorage() {
+//     const btn = document.querySelector(".btn__add-to-library");
 
 
 
-    btn.addEventListener("click", function (e) {
-        const target = e.target;
+//     btn.addEventListener("click", function (e) {
+//         const target = e.target;
 
-        let id = null
+//         let id = null
 
-        if (target.tagName == "BUTTON") {
+//         if (target.tagName == "BUTTON") {
 
-            id = getParentElemntData(target, ".modal-card-info")
-        }    
+//             id = getParentElemntData(target, ".modal-card-info")
+//         }    
 
-        if (target.tagName == "SPAN") {
+//         if (target.tagName == "SPAN") {
 
-            id = getParentElemntData(target, ".modal-card-info")
-        }
+//             id = getParentElemntData(target, ".modal-card-info")
+//         }
 
-        if (isCheck(+id)) {
-            upDateLocalStorage(KEY_LOCALSTORAGE, utils.localStorage)
-        }
-    })
-}
+//         if (isCheck(+id)) {
+//             upDateLocalStorage(KEY_LOCALSTORAGE, utils.localStorage)
+//         }
+//     })
+// }
 
 
-function isCheck(id) {
-    if (!utils.localStorage.includes(id)) {
-        utils.localStorage.push(id);
-        return true
-    } 
-}
+// function isCheck(id) {
+//     if (!utils.localStorage.includes(id)) {
+//         utils.localStorage.push(id);
+//         return true
+//     } 
+// }
 
 
 
 // поиск родительского эелмента с классом .modal-card-info и получение data атрибута id фильма 
-function getParentElemntData(element, selector) {
-    return element.closest(selector).dataset.id
-}
+// function getParentElemntData(element, selector) {
+//     return element.closest(selector).dataset.id
+// }
 
-function upDateLocalStorage(key, data) {
-    addToLocalStorage(key, transformObjToJSON(data))
-}
+// function upDateLocalStorage(key, data) {
+//     addToLocalStorage(key, transformObjToJSON(data))
+// }
 
 // добавление значение в localStorage
-function addToLocalStorage(key, obj) {
-    localStorage.setItem(key, obj)
-}
-// поулчение значаний из localStorage по ключу my-libraries
-function getLocalStorage(key) {
-    localStorage.getItem(key)
-}
+// function addToLocalStorage(key, obj) {
+//     localStorage.setItem(key, obj)
+// }
+// // поулчение значаний из localStorage по ключу my-libraries
+// function getLocalStorage(key) {
+//     localStorage.getItem(key)
+// }
 
-// преобразование js обьекта в JSON обьект
-function transformObjToJSON(obj) {
-    try {
+// // преобразование js обьекта в JSON обьект
+// function transformObjToJSON(obj) {
+//     try {
 
-        return JSON.stringify(obj)
-    } catch (error) {
-        console.log(error)
-    }
-}
+//         return JSON.stringify(obj)
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
 
-// преобразование JSON обьекта в js обьект
-function transformJSONtoObj(obj) {
-    try {
+// // преобразование JSON обьекта в js обьект
+// function transformJSONtoObj(obj) {
+//     try {
 
-        return JSON.parse(obj)
-    } catch (error) {
-        console.log(error)
+//         return JSON.parse(obj)
+//     } catch (error) {
+//         console.log(error)
 
-    }
-}
+//     }
+// }
