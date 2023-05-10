@@ -25,7 +25,7 @@ export function markup(results) {
       let rating = vote_average.toFixed(1);
         return `<li class="card__item list" id="${id}">
             <img src='${path}' loading="lazy" alt="${overview}" class="card__img" />
-            <div class="container-info">
+            <div class="container-info" data-modal-open="modal-1">
             <h2 class="card__title">${original_title}</h2>
             <p class="card__desc">${nameGenres(genre_ids).join(', ')} | ${releaseDate}</p>
             <p class="card__rating">${rating}</p>

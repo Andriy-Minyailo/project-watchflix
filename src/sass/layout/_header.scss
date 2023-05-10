@@ -54,6 +54,13 @@
 .header-nav-item {
   padding-right: 40px;
 }
+
+.header-link:hover {
+  transition: color 0.2s ease;
+  color: #F87719;
+}
+
+
 .header-link {
   font-weight: 500;
   font-size: 14px;
@@ -151,6 +158,10 @@
 
 // ------моб меню--------
 
+.logo-img__menu {
+  margin-left: 20px;
+  margin-top: 8px;
+}
 
 .header-menu {
   font-size: 14px;
@@ -170,28 +181,77 @@ padding-top: 20px;
 }
 
 .mob-menu {
-  position: absolute;
-  left: -204px;
+  position: fixed;
   top: 0;
-  width: 204px;
-  transition: transform 300ms;
-  background-color: aquamarine;
+  left: -64%;
+  width: 64%;
+  height: 428px;
+  background-color: #111111;
+  z-index: 999;
+  transition: left 0.3s ease;
+  border-radius: 0px 8px 8px 0px;
 }
-.header.open .mob-menu {
-  transform: translateX(100%);
+
+.mob-menu-list {
+  padding: 0;
+  list-style: none;
+  transform: translateY(50px);
+  margin-left: 20px;
 }
+
 .mob-menu-item {
-  font-size: 14px;
-  line-height: 16px;
-  color: #FFFFFF;
-  color: inherit;
-  padding-bottom: 24px;
+  margin-bottom: 20px;
 }
-.mob-menu-svg {
-  border: none;
-  background: inherit;
-  padding-bottom: 40px;
-}
+
 .mob-menu-link {
-  color: #B7B7B7;
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.mob-menu-link:hover {
+  color: #F87719;
+  transition: color 0.2s ease;
+}
+
+.mob-menu-svg {
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.mob-menu-svg svg {
+  width: 30px;
+  height: 30px;
+  fill: #333;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transform: translateX(200px);
+}
+
+
+body {
+  overflow: auto;
+}
+
+.img_menu-mobile {
+  margin-left: 20px;
+}
+
+// curent
+.current a {
+  color: #F87719;
 }

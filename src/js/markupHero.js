@@ -29,8 +29,7 @@ export function markupHero(results) {
             <h2 class="hero__title">${original_title}</h2>
             <p class="hero__rating">${vote_average}</p>
             <p class="hero__text">${overview}</p>
-            <button id="watch-trailter__btn" class="hero__btn watch-trailer-dark-theme" data-id="${id}" type="button">Watch trailer</button>
-            <div id="swiper" class="tui-pagination"></div>
+            <button id="watch-trailter__btn" class="hero__btn watch-trailer " data-id="${id}" type="button">Watch trailer</button>
             </div>
             <div class="hero__backgr" id="${id}">
             <img src='${path}' loading="lazy" alt="${overview}" class="hero__img" />

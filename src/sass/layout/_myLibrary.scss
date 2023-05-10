@@ -248,9 +248,15 @@
     max-height: 52px;
     padding: 12px 24px;
 
-    top: 45%;
+    top: 35%;
     left: 49%;
   }
+     &:hover,
+     &:focus {
+       background: linear-gradient(141.22deg,
+           #f84119 9.4%,
+           rgba(248, 159, 25, 0.68) 91.91%);
+     }
 }
 
 .search-movie-btn__text {
@@ -321,19 +327,29 @@
   transform: translateY(40px);
 
   @include desktop {
-    transform: translateY(160px);
+    transform: translateY(45px);
   }
 }
 
 .my-library__card {
   padding-top: 40px;
-  padding-bottom: 40px;
+  // padding-bottom: 40px;
   @include tablet {
     padding-top: 90px;
-      padding-bottom: 60px;
+      // padding-bottom: 60px;
   }
   @include desktop {
       padding-top: 115px;
-        padding-bottom: 95px;
+        // padding-bottom: 95px;
+  }
+}
+
+.load-more {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-top: 24px;
+  @include tablet {
+    margin-top: 40px;
   }
 }

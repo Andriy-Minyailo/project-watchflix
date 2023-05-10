@@ -3,8 +3,9 @@ import { saveMovieList } from "./localStorage";
 import { loadMoveList } from "./localStorage";
 import { KEY_MOVIE_LIST } from "./localStorage";
 import { checkLocalStorage } from "./checkLocalStorage";
-
-let localMarkup;
+import {startRenderModalInfo} from './createModalInfo/createModalInfo'
+import { modalListener } from './modals-open-close';
+// let localMarkup;
 let filmIndex;
 
 const refs = {
@@ -14,22 +15,25 @@ const refs = {
 }
 const stateButton = {
     addText: 'Add to my library',
-    removeText: 'remove to my library',
-    localMarkup,
+    removeText: 'Delete from my library',
+    localMarkup: '',
     currentStateButton: true
 }
 
-// refs.card.addEventListener('click', onLoadModal);
+refs.card.addEventListener('click', onLoadModal);
 
 function onLoadModal(event) {
     const { id } = event.target.offsetParent;
     // console.log(event.target.offsetParent.innerHTML);
     if (!id) { return };
+    const idNum = Number(id);
     stateButton.localMarkup = {
-        id: id,
+        id: idNum,
         str: event.target.offsetParent.innerHTML
     };
-    checkFilmLocalStorage(id); 
+    checkFilmLocalStorage(idNum);
+    startRenderModalInfo(idNum);
+    modalListener('modal-1');
      }
 
 function checkFilmLocalStorage(idFilm) {
@@ -60,7 +64,7 @@ function checkFilmLocalStorage(idFilm) {
   }
     }
 
-// refs.btnModalInfo.addEventListener('click', onLoadLocalStorage);
+refs.btnModalInfo.addEventListener('click', onLoadLocalStorage);
 
 function onLoadLocalStorage(event) {
    

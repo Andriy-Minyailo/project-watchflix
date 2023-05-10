@@ -4,7 +4,7 @@ const modalRefs = {
   closeModalBtns: document.querySelectorAll('[data-modal-close]'),
 };
 
-export function modalListener(modalId) {
+export function modalListener(modalId, onClose) {
   const backdrop = document.querySelector(`[data-modal="${modalId}"]`);
   const closeModalBtn = backdrop.querySelector('[data-modal-close]');
 
@@ -23,6 +23,7 @@ export function modalListener(modalId) {
     if (e.key === 'Escape' || e.target === backdrop) {
       backdrop.classList.add('is-hidden');
       removeListeners();
+      if (onClose) onClose();
     }
   }
 
@@ -35,7 +36,8 @@ export function modalListener(modalId) {
 }
 
 modalRefs.openModalBtns.forEach(button => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (e) => {
     modalListener(button.dataset.modalOpen);
+    console.log(e.currentTarget);
   });
 });
