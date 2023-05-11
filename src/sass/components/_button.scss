@@ -642,10 +642,20 @@
 
 //=================Pagination===================
 
+
 .tui-pagination {
   display: flex;
   justify-content: center;
   height: 40px;
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 44px;
+  }
+
+  @include desktop {
+    margin-top: 60px;
+  }
 }
 
 .tui-page-btn {
