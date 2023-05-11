@@ -138,8 +138,11 @@ height: 150px;
   font-weight: 400;
   line-height: 1.14;
   display: flex;
-  overflow: scroll;
-
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    background-color: transparent;
+  }
+  
   @include tablet {
     width: 275px;
     height: 120px;
