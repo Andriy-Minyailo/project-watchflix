@@ -1,0 +1,57 @@
+<div class="popup modal-card-info is-hidden" data-modal="modal-1">
+  <div class="modal__card-info-modal popup__content">
+    <button type="button" class="modal__close-btn" data-modal-close="modal-1">
+      <img src="./svg/close.svg" alt="close" class="img-cls" />
+      <!-- <svg class="modal__icon-close"><use href="./svg/close.svg" class="btn-cls"></svg> -->
+    </button>
+    <div class="modal__content">
+      <div class="modal__column">
+        <div class="modal-img-wrapper">
+          <!-- <img src="https://image.tmdb.org/t/p/original/3YlvPrhWCZvdGamTxjIFb4h7Wnj.jpg" alt="" class="modal__img-modal-card-info"> -->
+          <img src="#" alt="" class="modal__img-modal-card-info" />
+        </div>
+      </div>
+      <div class="modal__column">
+        <div class="modal__info">
+          <h3 class="modal-info__name"></h3>
+          <ul class="modal-info__list">
+            <li class="modal-info__item">
+              <p class="modal-info-vote-left__text flex text-left">
+                Vote / Votes
+              </p>
+              <div class="modal-info-vote-right flex">
+                <p class="modal-info-vote-right__text _vote"></p>
+                <span class="modal-info-vote-right__text-slesh">/</span>
+                <p class="modal-info-vote-right__text _votes"></p>
+              </div>
+            </li>
+            <li class="modal-info__item">
+              <p class="modal-info-left__text-popoparity flex text-left">
+                Popularity
+              </p>
+              <p class="modal-info-right__text-popoparity flex"></p>
+            </li>
+            <li class="modal-info__item">
+              <p class="modal-info-left__text-genre flex text-left">Genre</p>
+              <p class="modal-info-right__text-genre flex"></p>
+            </li>
+          </ul>
+          <div class="modal-info__about">
+            <p class="modal-info-about__text-title-about text-left">about</p>
+            <p class="modal-info-about__text-overwiew-about"></p>
+          </div>
+        </div>
+        <div class="modal-btn__action">
+          <button
+            type="button"
+            id="btnModalInfo"
+            class="btn__add-to-library add-to-my-library-black-btn-dark-theme"
+            data-modal-close="modal-1"
+          >
+            <span class="btn__text">Add to my library</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,355 @@
+// Далее можно использовать миксины в вашем SCSS коде
+
+// Использование миксина "tel"
+@include tel {
+  .my-library__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    width: 235px;
+    height: 76px;
+
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .my-library__description {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    width: 249px;
+    height: 112px;
+
+    color: #f8f8f8;
+
+    padding-left: 20px;
+  }
+
+  .my-library__container {
+    background-image: linear-gradient(
+        83.48deg,
+        #0e0e0e 25.78%,
+        rgba(14, 14, 14, 0) 60.07%
+      ),
+      url('/src/img/upgrade/chairsmobile.jpg');
+    // max-width: 320px;
+    min-height: 380px;
+
+    @include retina {
+      background-image: linear-gradient(
+          83.48deg,
+          #0e0e0e 25.78%,
+          rgba(14, 14, 14, 0) 60.07%
+        ),
+        url('/src/img/upgrade/chairsmobileretina.jpg');
+    }
+  }
+}
+
+.my-library__container {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.my-library__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include tel {
+    transform: translateY(40px);
+  }
+
+  @include tablet {
+    transform: translateY(70px);
+  }
+
+  @include desktop {
+    transform: translateY(170px);
+    transform: translateX(-117px);
+    left: 117px;
+    position: relative;
+    width: 1000px;
+  }
+}
+
+// Использование миксина "tablet"
+@include tablet {
+  .my-library__title {
+    width: 332px;
+    height: 104px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 52px;
+    display: flex;
+    align-items: center;
+
+    /* White */
+
+    color: #ffffff;
+
+    margin-bottom: 23px;
+  }
+
+  .my-library__description {
+    width: 357px;
+    height: 80px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    /* Secondary text */
+
+    color: #f8f8f8;
+  }
+
+  .my-library__container {
+    background-image: linear-gradient(
+        83.48deg,
+        #0e0e0e 25.78%,
+        rgba(14, 14, 14, 0) 60.07%
+      ),
+      url('/src/img/upgrade/chairstablet.jpg');
+    // min-width: 768px;
+    min-height: 372px;
+
+    @include retina {
+      background-image: linear-gradient(
+          83.48deg,
+          #0e0e0e 25.78%,
+          rgba(14, 14, 14, 0) 60.07%
+        ),
+        url('/src/img/upgrade/chairstabletretina.jpg');
+    }
+  }
+}
+
+// Использование миксина "desktop"
+@include desktop {
+  .my-library__title {
+    width: 464px;
+    height: 150px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+
+    color: #ffffff;
+
+    margin-bottom: 37px;
+  }
+
+  .my-library__description {
+    width: 464px;
+    height: 76px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+
+    color: #f8f8f8;
+  }
+
+  .my-library__container {
+    background-image: linear-gradient(
+        83.48deg,
+        #0e0e0e 25.78%,
+        rgba(14, 14, 14, 0) 60.07%
+      ),
+      url('/src/img/upgrade/chairsdesktop.jpg');
+    // min-width: 1280px;
+    min-height: 720px;
+
+    @include retina {
+      background-image: linear-gradient(
+          83.48deg,
+          #0e0e0e 25.78%,
+          rgba(14, 14, 14, 0) 60.07%
+        ),
+        url('/src/img/upgrade/chairsdesktopretina.jpg');
+    }
+  }
+}
+
+// not found
+
+.not-found__container {
+  // background-color: #111111;
+
+  @include tel {
+    min-height: 332px;
+    // min-width: 320px;
+  }
+
+  @include tablet {
+    width: 704px;
+  }
+
+  @include desktop {
+    width: 1216px;
+    height: 720px;
+  }
+
+  position: relative;
+}
+
+.search-movie-btn {
+  position: absolute;
+  top: 60%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 74px;
+
+  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  box-shadow: none;
+  border: none;
+
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  @include tablet {
+    max-width: 133px;
+    max-height: 40px;
+  }
+
+  @include desktop {
+    max-width: 158px;
+    max-height: 52px;
+    padding: 12px 24px;
+
+    top: 35%;
+    left: 49%;
+  }
+     &:hover,
+     &:focus {
+       background: linear-gradient(141.22deg,
+           #f84119 9.4%,
+           rgba(248, 159, 25, 0.68) 91.91%);
+     }
+}
+
+.search-movie-btn__text {
+  width: 73px;
+  height: 14px;
+
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  box-shadow: none;
+
+  color: #111111;
+
+  @include tablet {
+    width: 85px;
+    font-size: 14px;
+    line-height: 16px;
+
+    white-space: nowrap;
+  }
+
+  @include desktop {
+    width: 110px;
+    font-size: 18px;
+    line-height: 28px;
+    white-space: nowrap;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+.not-found__text-li {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* or 140% */
+
+  text-align: center;
+
+  color: #ffffff;
+  width: 280px;
+
+  @include tablet {
+    width: 438px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @include desktop {
+    width: 584px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.not-found__text {
+  display: flex;
+  justify-content: center;
+}
+
+.not-found__text-ul {
+  transform: translateY(40px);
+
+  @include desktop {
+    transform: translateY(45px);
+  }
+}
+
+.my-library__card {
+  padding-top: 40px;
+  // padding-bottom: 40px;
+  @include tablet {
+    padding-top: 90px;
+      // padding-bottom: 60px;
+  }
+  @include desktop {
+      padding-top: 115px;
+        // padding-bottom: 95px;
+  }
+}
+
+.load-more {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-top: 24px;
+  @include tablet {
+    margin-top: 40px;
+  }
+}
