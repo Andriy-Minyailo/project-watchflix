@@ -78,7 +78,7 @@ overlay.addEventListener('click', () => {
 import { toggleModalCardInfo } from "./createModalInfo/toggleModalCardInfo";
 
 // header nav
-// Получаем элемент хедера
+// Получаем элемент хедера - абырвал
 let headerNav = document.querySelector('.header-nav');
 
 // Функция для изменения цвета хедера
