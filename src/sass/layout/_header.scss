@@ -50,6 +50,11 @@
     padding-left: 8px;
   }
 }
+
+.name.light {
+  color: #282828;
+
+}
 .header-nav-list {
   display: none;
   margin-right: auto;
@@ -279,6 +284,20 @@ body {
 .header-link.light {
   color:#595959;
 }
+
+
+.footer-text.light {
+  color: #595959;
+}
+
+.footer-text-span.light {
+  color: #595959;
+}
+
+.footer-link.light {
+  color: #595959;
+}
+
 // curent
 .current a {
   color: #F87719;

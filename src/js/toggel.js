@@ -28,9 +28,25 @@ let isLight = localStorage.getItem('isLight');
 if (isLight === 'true') {
   document.body.classList.add('light');
   document.querySelector('.mob-menu').classList.add('light');
-  document.querySelector('.header-menu').classList.add('light'); // Добавляем класс 'light' для header-menu
+  document.querySelector('.header-menu').classList.add('light');
   const headerLinks = document.querySelectorAll('.header-link');
+  document.querySelector('.name').classList.add('light');
   headerLinks.forEach((link) => {
+    link.classList.add('light');
+  });
+
+  const footerTexts = document.querySelectorAll('.footer-text');
+  footerTexts.forEach((text) => {
+    text.classList.add('light');
+  });
+
+  const footerTextSpans = document.querySelectorAll('.footer-text-span');
+  footerTextSpans.forEach((span) => {
+    span.classList.add('light');
+  });
+
+  const footerLinks = document.querySelectorAll('.footer-link');
+  footerLinks.forEach((link) => {
     link.classList.add('light');
   });
 }
@@ -38,11 +54,29 @@ if (isLight === 'true') {
 LightSwitcher.onclick = function () {
   document.body.classList.toggle('light');
   document.querySelector('.mob-menu').classList.toggle('light');
-  document.querySelector('.header-menu').classList.toggle('light'); // Переключаем класс 'light' для header-menu
+  document.querySelector('.name').classList.toggle('light');
+  document.querySelector('.header-menu').classList.toggle('light');
+  
   const headerLinks = document.querySelectorAll('.header-link');
   headerLinks.forEach((link) => {
     link.classList.toggle('light');
   });
+
+  const footerTexts = document.querySelectorAll('.footer-text');
+  footerTexts.forEach((text) => {
+    text.classList.toggle('light');
+  });
+
+  const footerTextSpans = document.querySelectorAll('.footer-text-span');
+  footerTextSpans.forEach((span) => {
+    span.classList.toggle('light');
+  });
+
+  const footerLinks = document.querySelectorAll('.footer-link');
+  footerLinks.forEach((link) => {
+    link.classList.toggle('light');
+  });
+
   isLight = document.body.classList.contains('light');
   localStorage.setItem('isLight', isLight);
 };
