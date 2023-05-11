@@ -75,10 +75,10 @@ overlay.addEventListener('click', () => {
   overlay.style.visibility = 'hidden';
   menuContainer.querySelectorAll('a').forEach(link => link.style.display = 'none');
 });
-
+import { toggleModalCardInfo } from "./createModalInfo/toggleModalCardInfo";
 
 // header nav
-// Получаем элемент хедера
+// Получаем элемент хедера 
 let headerNav = document.querySelector('.header-nav');
 
 // Функция для изменения цвета хедера
@@ -86,10 +86,12 @@ function toggleHeaderColor() {
   if (document.body.classList.contains('light')) {
     // Если текущая тема светлая, устанавливаем светлый цвет хедера
     headerNav.style.backgroundColor = '#fff';
+    toggleModalCardInfo();
     // Здесь вы можете добавить другие стили или классы по вашему выбору
   } else {
     // Если текущая тема темная, устанавливаем темный цвет хедера
     headerNav.style.backgroundColor = '#111111';
+    toggleModalCardInfo();
     // Здесь вы можете добавить другие стили или классы по вашему выбору
   }
 }
