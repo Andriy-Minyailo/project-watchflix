@@ -26,21 +26,21 @@ export function checkLocalStorage(key) {
   }
   if (localMovieList !== undefined) {
     quantityFilm = localMovieList.length;
-    const localMovieListFist =  localMovieList.slice(0, 12);
-    if (quantityFilm > 12) {
+    const localMovieListFist =  localMovieList.slice(0, 9);
+    if (quantityFilm > 9) {
     
       onloadMoreButton.buttonState({
             isHiden: false,
             active: true,
                 });
-
-    } else (onloadMoreButton.buttonState({
+      activeLoadMore(onloadMoreButton.active);
+      } else (onloadMoreButton.buttonState({
             isHiden: true,
             active: false,
                 }))
         refs.moviBase.innerHTML = "";
-       refs.movieContainer.innerHTML = markupLocal(localMovieListFist);
-  }
+    refs.movieContainer.innerHTML = markupLocal(localMovieListFist);
+    }
   else {
     refs.movieContainer.innerHTML = '';
     refs.moviBase.innerHTML = baseLocalMarkup;
@@ -49,21 +49,23 @@ export function checkLocalStorage(key) {
 
 checkLocalStorage(KEY_MOVIE_LIST);
 
-if (onloadMoreButton.active) {
-  refs.loadMoreButton.addEventListener('click', onSumbitLoadMore);
-} 
+function activeLoadMore(state) {
+  if (state) {
+    refs.loadMoreButton.addEventListener('click', onSumbitLoadMore);
+  }
+}
 
 function onSumbitLoadMore() {
   const localMovieList = getMovieList(KEY_MOVIE_LIST);
-    let start = 12;
-    let end = 24;
+    let start = 9;
+    let end = 18;
     const localMovieList12 = localMovieList.slice(start, end);
     refs.movieContainer.insertAdjacentHTML("beforeend", markupLocal(localMovieList12));
-    start += 12;
-    end += 12;
-  quantityFilm -= 12;
+    start += 9;
+    end += 9;
+  quantityFilm -= 9;
   console.log(quantityFilm);
-  if (quantityFilm < 12) {
+  if (quantityFilm < 9) {
     onloadMoreButton.buttonState({
       isHiden: true,
       active: false,
