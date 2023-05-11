@@ -300,6 +300,7 @@ const searchParamsToQuery = params => {
 };
 
 let totalItems = 0;
+let totalPages = 0;
 
 const fetchMovies = async params => {
   try {
