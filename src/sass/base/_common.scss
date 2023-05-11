@@ -1,0 +1,31 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+
+$colors: (
+  'primary': rgba(255, 255, 255, 1),
+  'accentOrange': rgba(248, 65, 25, 1),
+  'accentYellow': rgba(255, 194, 38, 1),
+  'backgroundPrimary': rgba(40, 40, 40, 1),
+  'backgroundSecondary': rgba(17, 17, 17, 1),
+  'secondaryText': rgba(248, 248, 248, 1),
+  'grey': rgba(183, 183, 183, 1),
+
+
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: getColor('backgroundPrimary');
+  color: getColor('primary');
+}
+
+body.light {
+  background-color: getColor('primary');
+    color: getColor('backgroundSecondary');
+}
+
+
+

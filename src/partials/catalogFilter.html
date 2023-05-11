@@ -1,0 +1,67 @@
+<div class="container">
+  <form class="catalog__search-form" id="catalog-search-form">
+    <input
+      id="catalog-search-input"
+      type="text"
+      name="searchQuery"
+      autocomplete="off"
+      placeholder="Film"
+      class="catalog__search-form-input catalog__search-form-input--film"
+    />
+    <select
+      name="catalog-year"
+      id="catalog-year-select"
+      class="catalog__search-form-input catalog__search-form-input--year catalog__search-form-input--hidden"
+    >
+      <option value="" disabled selected>Year</option>
+    </select>
+    <select
+      name="catalog-genre"
+      id="catalog-genre-select"
+      class="catalog__search-form-input catalog__search-form-input--genre catalog__search-form-input--hidden"
+    >
+      <option value="" disabled selected>Genre</option>
+    </select>
+    <select
+      name="catalog-country"
+      id="catalog-country-select"
+      class="catalog__search-form-input catalog__search-form-input--country catalog__search-form-input--hidden"
+    >
+      <option value="" disabled selected>Country</option>
+      <option value="USA">USA</option>
+      <option value="Great Britain">Great Britain</option>
+      <option value="France">France</option>
+      <option value="German">German</option>
+      <option value="Spain">Spain</option>
+      <option value="Mexico">Mexico</option>
+    </select>
+    <button
+      type="submit"
+      id="subbmit"
+      class="catalog__submit search-white-magnifier-dark-theme"
+    >
+      <svg width="48" height="48">
+        <use href="./svg/symbol-defs.svg#icon-searchd"></use>
+      </svg>
+    </button>
+  </form>
+  <div class="catalog__content">
+    <ul
+      class="catalog__list card"
+      id="catalog-list"
+      data-modal-open="modal-1"
+    ></ul>
+    <p
+      id="catalog-not-found-message"
+      class="catalog__message catalog__message--hidden"
+    >
+      There is no data satisfying your filters
+    </p>
+    <p
+      id="catalog-error-message"
+      class="catalog__message catalog__message--hidden"
+    >
+      Oops, something went wrong...<br />Please try again later.
+    </p>
+  </div>
+</div>

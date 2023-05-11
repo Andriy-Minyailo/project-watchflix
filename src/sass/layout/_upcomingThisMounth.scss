@@ -1,0 +1,178 @@
+.upcoming {
+  $self: &;
+
+  font-family: 'Roboto';
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__body {
+    padding: 20px 0;
+  }
+
+  &__status-message {
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__movie {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+
+    &-backdrop {
+      display: block;
+      width: 100%;
+      margin-bottom: 24px;
+      object-fit: contain;
+      border-radius: 5px;
+    }
+
+    &-title {
+      @include font(20px, 500, 1.15, normal);
+
+      text-transform: uppercase;
+    }
+
+    &-stats {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 12px;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    &-stats-item {
+      @include font(16px, 500, 1.18, normal);
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      &--release {
+        #{$self}__movie-stats-value {
+          color: #f87719;
+        }
+      }
+
+      &--vote {
+        #{$self}__movie-stats-value {
+          display: flex;
+        }
+      }
+    }
+
+    &-stats-label {
+      flex: 1;
+      margin-right: 30px;
+      // color: #b7b7b7;
+    }
+
+    &-stats-value {
+      flex: 1;
+      // color: #ffffff;
+    }
+
+    &-vote {
+      min-width: 30px;
+      padding: 1px 4px;
+      color: #000;
+      background-color: #fff;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    &-vote-divider {
+      display: inline-block;
+      margin: 0 8px;
+    }
+
+    &-about {
+      margin-bottom: 20px;
+    }
+
+    &-about-title {
+      @include font(16px, 500, 1.18, normal);
+
+      margin-bottom: 16px;
+      // color: #b7b7b7;
+      text-transform: uppercase;
+    }
+
+    &-about-text {
+      @include font(14px, 400, 1.4, normal);
+
+      // color: #f8f8f8;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    &__movie {
+      padding-bottom: 77px;
+      &-title {
+        @include font(28px, 500, 1.17, normal);
+      }
+
+      &-stats {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'release popularity' 'vote genre';
+      }
+
+      &-stats-item {
+        align-items: flex-start;
+
+        &--release {
+          grid-area: release;
+        }
+
+        &--vote {
+          grid-area: vote;
+        }
+
+        &--popularity {
+          grid-area: popularity;
+        }
+
+        &--genre {
+          grid-area: genre;
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    &__movie {
+      flex-direction: row;
+      align-items: flex-start;
+      padding-bottom: 100px;
+
+      &-title {
+        @include font(32px, 500, 1.18, normal);
+      }
+
+      &-backdrop {
+        width: 65%;
+        margin-right: 16px;
+        margin-bottom: 0;
+      }
+
+      &-stats {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'release' 'vote' 'popularity' 'genre';
+        max-width: 400px;
+        margin-top: 28px;
+      }
+
+      &-about-text {
+        max-height: 160px;
+        overflow-y: auto;
+      }
+    }
+  }
+}
