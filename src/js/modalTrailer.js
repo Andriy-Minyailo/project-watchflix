@@ -25,6 +25,16 @@ async function handleTrailerClick(e) {
       noTrailerWrapper.classList.add('is-hidden');
       trailerWrapper.classList.remove('is-hidden');
     }
+
+    const trailerModal = document.querySelector('.modal-trailer');
+    let LightSwitcher = document.querySelector('.switcher');
+    let isLight = localStorage.getItem('isLight');
+    if (isLight === 'true') {
+      trailerModal.classList.add('modal-trailer-light');
+    }
+    LightSwitcher.addEventListener('click', () => {
+      trailerModal.classList.toggle('modal-trailer-light');
+    });
   } catch (error) {
     console.log(error);
   } finally {
