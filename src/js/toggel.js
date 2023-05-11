@@ -77,3 +77,23 @@ overlay.addEventListener('click', () => {
 });
 
 
+// header nav
+// Получаем элемент хедера
+let headerNav = document.querySelector('.header-nav');
+
+// Функция для изменения цвета хедера
+function toggleHeaderColor() {
+  if (document.body.classList.contains('light')) {
+    // Если текущая тема светлая, устанавливаем светлый цвет хедера
+    headerNav.style.backgroundColor = '#fff';
+    // Здесь вы можете добавить другие стили или классы по вашему выбору
+  } else {
+    // Если текущая тема темная, устанавливаем темный цвет хедера
+    headerNav.style.backgroundColor = '#111111';
+    // Здесь вы можете добавить другие стили или классы по вашему выбору
+  }
+}
+
+// Вызываем функцию при загрузке страницы и при каждом переключении темы
+window.addEventListener('load', toggleHeaderColor);
+LightSwitcher.addEventListener('click', toggleHeaderColor);
