@@ -28,12 +28,21 @@ let isLight = localStorage.getItem('isLight');
 if (isLight === 'true') {
   document.body.classList.add('light');
   document.querySelector('.mob-menu').classList.add('light');
+  document.querySelector('.header-menu').classList.add('light'); // Добавляем класс 'light' для header-menu
+  const headerLinks = document.querySelectorAll('.header-link');
+  headerLinks.forEach((link) => {
+    link.classList.add('light');
+  });
 }
 
 LightSwitcher.onclick = function () {
-  
   document.body.classList.toggle('light');
   document.querySelector('.mob-menu').classList.toggle('light');
+  document.querySelector('.header-menu').classList.toggle('light'); // Переключаем класс 'light' для header-menu
+  const headerLinks = document.querySelectorAll('.header-link');
+  headerLinks.forEach((link) => {
+    link.classList.toggle('light');
+  });
   isLight = document.body.classList.contains('light');
   localStorage.setItem('isLight', isLight);
 };

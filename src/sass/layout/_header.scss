@@ -261,6 +261,8 @@ body {
   margin-left: 20px;
 }
 
+
+// light
 .mob-menu.light {
   background-color: #FFFFFF;
 
@@ -269,7 +271,14 @@ body {
   }
 }
 
+.header-menu.light {
+  color:#595959;
+}
 
+
+.header-link.light {
+  color:#595959;
+}
 // curent
 .current a {
   color: #F87719;
