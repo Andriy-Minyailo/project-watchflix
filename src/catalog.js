@@ -7,4 +7,7 @@ import './js/catalogFilter';
 import './js/modals-open-close';
 import './js/modalTrailer';
 import './js/footerModal';
+<<<<<<< Updated upstream
 import './js/scrollUp';
+=======
+>>>>>>> Stashed changes
