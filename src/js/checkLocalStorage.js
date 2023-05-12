@@ -20,7 +20,7 @@ let quantityFilm;
 
 export function checkLocalStorage(key) {
   const localMovieList = getMovieList(key);
-  console.log(localMovieList);
+  
   if (!refs.moviBase) {
     return;
   }
@@ -64,7 +64,7 @@ function onSumbitLoadMore() {
     start += 9;
     end += 9;
   quantityFilm -= 9;
-  console.log(quantityFilm);
+  
   if (quantityFilm < 9) {
     onloadMoreButton.buttonState({
       isHiden: true,

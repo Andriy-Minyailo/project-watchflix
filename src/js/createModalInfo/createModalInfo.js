@@ -11,7 +11,7 @@ const requestServer = new RequestServer();
 //     localStorage: getLocalStorage(KEY_LOCALSTORAGE) ?  transformJSONtoObj(getLocalStorage(KEY_LOCALSTORAGE)) : []
 // }
 
-// console.log("text", utils.localStorage)
+
 
 // if (utils.localStorage.length == 0) {
 //     addToLocalStorage(KEY_LOCALSTORAGE, transformObjToJSON([]))
@@ -27,7 +27,7 @@ async function getMovieDetails(id) {
 
 export async function startRenderModalInfo(id = 603692) {
     const data = await getMovieDetails(id)
-    console.log("DATA", data)
+    
 
     // utils.cardsInfo.push(data)
 
