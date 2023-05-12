@@ -6,10 +6,10 @@ export const KEY_MOVIE_LIST = "movieList";
 
 export function loadMoveList(data) {
   const currentState = getMovieList(KEY_MOVIE_LIST);
-  console.log(currentState);
+ 
   if (!currentState) {
           saveMovieList(KEY_MOVIE_LIST, [data]);
-      // console.log(currentState);
+      
   } else {
     currentState.push(data);
     saveMovieList(KEY_MOVIE_LIST, currentState);
@@ -28,9 +28,9 @@ export function loadMoveList(data) {
 
 // export function checkLocalStorage(key) {
 //   const localMovieList = getMovieList(key);
-//   console.log(localMovieList);
+//   
 //   if (localMovieList) {
-//     console.log(localMovieList);
+//    
    
     
 //     // refs.moviBase.innerHTML = "";
@@ -39,7 +39,7 @@ export function loadMoveList(data) {
 //   }
 //    else {
 //     refs.moviBase.innerHTML = baseLocalMarkup;
-//     console.log(baseLocalMarkup);
+//   
 //     }
 // }
 

@@ -6,8 +6,16 @@ const modalRefs = {
 
 export function modalListener(modalId, onClose) {
   const backdrop = document.querySelector(`[data-modal="${modalId}"]`);
-  const closeModalBtn = backdrop.querySelector('[data-modal-close]');
+  const closeModalBtnAll = backdrop.querySelectorAll('[data-modal-close]');
+ 
+  const closeModalBtn = closeModalBtnAll[0];
 
+  let closeModalBtnTwo;
+  if (closeModalBtnAll.length === 2) {
+    closeModalBtnTwo = closeModalBtnAll[1];
+    closeModalBtnTwo.addEventListener('click', modalClose);
+
+  }
   backdrop.classList.remove('is-hidden');
   document.querySelector('body').classList.add('noScroll');
   document.addEventListener('keydown', hideModal);
@@ -31,6 +39,9 @@ export function modalListener(modalId, onClose) {
     document.removeEventListener('keydown', hideModal);
     backdrop.removeEventListener('click', hideModal);
     closeModalBtn.removeEventListener('click', modalClose);
+    if (closeModalBtnAll.length === 2) {
+      closeModalBtnTwo.removeEventListener('click', modalClose);
+    }
     document.querySelector('body').classList.remove('noScroll');
   }
 }
@@ -38,6 +49,6 @@ export function modalListener(modalId, onClose) {
 modalRefs.openModalBtns.forEach(button => {
   button.addEventListener('click', e => {
     modalListener(button.dataset.modalOpen);
-    console.log(e.currentTarget);
+    
   });
 });

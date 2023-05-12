@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     gap: 12px;
     padding: 60px 0;
+    color: #B7B7B7;
 
     &-input {
       display: flex;
@@ -21,9 +22,13 @@
       border: 1px solid #ffffff;
       border-radius: 8px;
       font-size: 16px;
+      color: #B7B7B7;
+      background: #1C1C1C;
+      
 
       &--year {
         max-width: 95px;
+        
       }
 
       &--genre {
@@ -51,6 +56,7 @@
     // stroke: #000;
     font-size: 16px;
     cursor: pointer;
+  
   }
 
   &__message {
@@ -70,18 +76,18 @@
       gap: 20px;
 
       &-input {
-        max-width: 180px;
+        max-width:200px;
 
         &--year {
           max-width: 95px;
         }
 
         &--genre {
-          max-width: 144px;
+          max-width: 130px;
         }
 
         &--country {
-          max-width: 180px;
+          max-width: 150px;
         }
       }
     }
@@ -113,6 +119,8 @@
     &__search-form {
       &-input {
         border: 1px solid #595959;
+        background: #F8F8F8;
+        color: #282828;
       }
     }
 

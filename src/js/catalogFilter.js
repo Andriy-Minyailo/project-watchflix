@@ -122,7 +122,7 @@
 
 //     return response.data.results;
 //   } catch (error) {
-//     console.log(error);
+//     
 
 //     listDisplay.hide();
 //     errorMessageDisplay.show();
@@ -300,6 +300,7 @@ const searchParamsToQuery = params => {
 };
 
 let totalItems = 0;
+let totalPages = 0;
 
 const fetchMovies = async params => {
   try {
@@ -336,7 +337,7 @@ const renderMovies = async movies => {
 
 const handlePageChange = async event => {
   currentPage = event.target.dataset.page;
-  console.log("🚀  currentPage", currentPage)
+ 
 
   const movies = await fetchMovies();
 
@@ -368,7 +369,7 @@ configureSelects();
 
 form.addEventListener('submit', handleSubmit);
 
-console.log()
+
 pagination.on('afterMove', async (event) => {
   currentPage = event.page;
   

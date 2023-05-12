@@ -23,7 +23,7 @@ export function nameGenres(arrayId) {
     } else if (result.length === 0) {
     result.push("no genres")
     }
-    // console.log(result);
+    
   return result
 
 }

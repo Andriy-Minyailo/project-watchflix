@@ -51,7 +51,7 @@ const fillData = async response => {
  
 
 
-  console.log(movie.id);
+  
   fillTitle(movie.original_title);
   fillBackdrop(movie.backdrop_path);
   fillReleaseDate(movie.release_date);
@@ -83,7 +83,16 @@ const fillData = async response => {
         if (!poster_path) {
           path = 'https://picsum.photos/500/750';
         }
-      let rating = vote_average.toFixed(1);
+    let rating = '';
+          for (let i = 1; i <= 5; i++) {
+            let ratingClass = 'fa-star-o';
+            if (i * 2 <= vote_average) {
+              ratingClass = 'fa-star';
+            } else if (i * 2 - 1 <= vote_average) {
+              ratingClass = 'fa-star-half-o';
+            }
+            rating += `<span class="fa star ${ratingClass}"> </span>`;
+          }
  stateButtonUpc.localMarkup = {
         id: id,
         str: `<img src='${path}' loading="lazy" alt="${overview}" class="card__img" />
@@ -93,7 +102,7 @@ const fillData = async response => {
             <p class="card__rating">${rating}</p>
             </div>`
     };
-  console.log(stateButtonUpc.localMarkup);
+ 
 
   
 };
@@ -169,36 +178,34 @@ const fillBackdrop = async backdropPath => {
 
 fetchUpcoming();
 
-console.log(currenyMovie);
+
 
 
 
 
 function checkMovieLocalStorage(idFilm) {
     const currentState = getMovieList(KEY_MOVIE_LIST);
-    // console.log(currentState);
+   
     if (!currentState) {
         // const filmIndex = currentState.findIndex(obj => obj.id === Number(id));
         btn.textContent = stateButtonUpc.addText;
         stateButtonUpc.currentStateButton = true;
-        // console.log(filmIndex);
-        // console.log(stateButton.addText);
+
         return;
     }
     // const [idLocalArray] = Object.keys(currentState);
      filmIndex = currentState.findIndex(obj => obj.id === idFilm);
    
-    // console.log(filmIndex);
+   
         if (filmIndex !== -1) {
         btn.textContent = stateButtonUpc.removeText;
         stateButtonUpc.currentStateButton = false;
        
-        // console.log(stateButton.removeText);
+       
         } else {
         btn.textContent = stateButtonUpc.addText;
         stateButtonUpc.currentStateButton = true;
-        // console.log(filmIndex);
-        // console.log(stateButton.addText); 
+   
   }
 }
 if (btn) {
@@ -207,17 +214,17 @@ if (btn) {
      
 function onLoadLocalStorage(event) {
    
-    console.log(stateButtonUpc.currentStateButton);
+   
     if (stateButtonUpc.currentStateButton) {
         loadMoveList(stateButtonUpc.localMarkup);
         stateButtonUpc.currentStateButton = false;
         btn.textContent = stateButtonUpc.removeText;
-        console.log('add');
+       
     } else {
         deleteLocalFilm(filmIndex);
         stateButtonUpc.currentStateButton = true;
         btn.textContent = stateButtonUpc.addText;
-        console.log('remove');
+     
         // checkLocalStorage(KEY_MOVIE_LIST);
     }
 }

@@ -21,8 +21,18 @@ export function markup(results) {
         let path = `https://image.tmdb.org/t/p/w500${poster_path}`;
         if (!poster_path) {
           path = 'https://picsum.photos/500/750';
-        }
-      let rating = vote_average.toFixed(1);
+      }
+       let rating = '';
+          for (let i = 1; i <= 5; i++) {
+            let ratingClass = 'fa-star-o';
+            if (i * 2 <= vote_average) {
+              ratingClass = 'fa-star';
+            } else if (i * 2 - 1 <= vote_average) {
+              ratingClass = 'fa-star-half-o';
+            }
+            rating += `<span class="fa star ${ratingClass}"> </span>`;
+          }
+      // let rating = vote_average.toFixed(1);
         return `<li class="card__item list" id="${id}">
             <img src='${path}' loading="lazy" alt="${overview}" class="card__img" />
             <div class="container-info" data-modal-open="modal-1">

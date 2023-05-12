@@ -15,6 +15,7 @@
         &:hover {
             transform: scale(1.03);
             cursor:pointer;
+            box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
         }
         @include tablet {
         width: 224px;
@@ -75,21 +76,36 @@ font-style: normal;
 
     @include tablet {
         line-height: 1.5;
+        font-size: 10px;
         }
      @include desktop {
-        font-size: 20px;                
+        font-size: 18px;                
     }
 }
 
 .card__rating {
-    font-style: normal;
-    font-weight: 500;
+    // font-style: normal;
+    // font-weight: 500;
     font-size: 12px;
-    line-height: 1.5;
+    @include tablet {
+            font-size: 10px;
+        }
+    @include desktop {
+            font-size: 18px;
+        }
+    // line-height: 1.5;
         /* or 150% */
-    color: getColor('accentYellow');
+    // background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
 
-        @include desktop {
-             font-size: 20px;
-         }
+        // @include desktop {
+        //      font-size: 20px;
+        //  }
+                background: -webkit-gradient(linear,
+                    left top,
+                    left bottom,
+                    from(#f84119),
+                    to(#ffc226));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                
 }
