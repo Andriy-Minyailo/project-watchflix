@@ -80,6 +80,7 @@
 }
 
 .hero__title{
+  height: 70px;
   margin-left: 20px;
   margin-top: 40px;
   margin-bottom: 12px;
@@ -92,11 +93,13 @@
   color: #FFFFFF;
 
   @include tablet{
+    height: 116px;
     width: 265px;
     font-size: 32px;
   }
 
   @include desktop {
+    height: 180px;
     margin-left: 124px;
     margin-top: 118px;
     margin-bottom: 16px;
@@ -157,6 +160,7 @@ height: 150px;
   }
 
   @include desktop {
+    height: 130px;
     margin-left: 124px;
     margin-bottom: 36px;
     width: 367px;
