@@ -5,9 +5,10 @@
   top: 0;
   left: 0;
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   overflow-y: scroll;
   z-index: 3000000000000;
+  transition: 0.3s all;
 }
 
 .is-hidden {
