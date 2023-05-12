@@ -76,6 +76,7 @@ font-style: normal;
 
     @include tablet {
         line-height: 1.5;
+        font-size: 10px;
         }
      @include desktop {
         font-size: 18px;                
@@ -85,7 +86,13 @@ font-style: normal;
 .card__rating {
     // font-style: normal;
     // font-weight: 500;
-    font-size: 18px;
+    font-size: 12px;
+    @include tablet {
+            font-size: 10px;
+        }
+    @include desktop {
+            font-size: 18px;
+        }
     // line-height: 1.5;
         /* or 150% */
     // background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
