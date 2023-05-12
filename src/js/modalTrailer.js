@@ -1,5 +1,6 @@
 import { RequestServer } from './requestServer';
 import { modalListener } from './modals-open-close';
+import Loader from './loaderSpinner';
 
 const ref = {
   modal: document.querySelector(`[data-modal="modal-2"]`),
@@ -7,6 +8,16 @@ const ref = {
 const requestServer = new RequestServer();
 
 async function handleTrailerClick(e) {
+  modalListener('modal-2', onModalTrailerClose);
+  const loaderWrapper = document.getElementsByClassName('loader-wrapper')[0];
+  const noTrailerWrapper =
+    document.getElementsByClassName('modal-no-trailer')[0];
+  const trailerWrapper = document.getElementsByClassName('modal-trailer')[0];
+  const loader = new Loader(loaderWrapper);
+
+  noTrailerWrapper.classList.add('hidden');
+  loader.show();
+
   try {
     const movieId = e.currentTarget.getAttribute('data-id');
     const response = await requestServer.movieTrailer(movieId);
@@ -14,16 +25,17 @@ async function handleTrailerClick(e) {
     const trailer = results[0];
 
     if (trailer) {
-      const noTrailerWrapper =
-        document.getElementsByClassName('modal-no-trailer')[0];
-      const trailerWrapper =
-        document.getElementsByClassName('modal-trailer')[0];
-
       let html = `<iframe id="trailer-video-player" width="100%" height="100%" src="https://www.youtube.com/embed/${trailer.key}" title="${trailer.name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
       trailerWrapper.innerHTML = html;
 
-      noTrailerWrapper.classList.add('is-hidden');
-      trailerWrapper.classList.remove('is-hidden');
+      setTimeout(() => {
+        loader.hide();
+        trailerWrapper.classList.remove('hidden');
+      }, 1000);
+    } else {
+      loader.hide();
+      noTrailerWrapper.classList.remove('hidden');
+      trailerWrapper.classList.add('hidden');
     }
 
     const trailerModal = document.querySelector('.modal-trailer');
@@ -37,8 +49,6 @@ async function handleTrailerClick(e) {
     });
   } catch (error) {
     console.log(error);
-  } finally {
-    modalListener('modal-2', onModalTrailerClose);
   }
 }
 
@@ -47,8 +57,8 @@ function onModalTrailerClose() {
   const noTrailerWrapper =
     document.getElementsByClassName('modal-no-trailer')[0];
   trailerWrapper.innerHTML = '';
-  noTrailerWrapper?.classList.remove('is-hidden');
-  trailerWrapper?.classList.add('is-hidden');
+  noTrailerWrapper?.classList.remove('hidden');
+  trailerWrapper?.classList.add('hidden');
 }
 
 export function applyWatchTraileListener() {

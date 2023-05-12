@@ -47,7 +47,7 @@ export function modalListener(modalId, onClose) {
 }
 
 modalRefs.openModalBtns.forEach(button => {
-  button.addEventListener('click', (e) => {
+  button.addEventListener('click', e => {
     modalListener(button.dataset.modalOpen);
     
   });

@@ -17,7 +17,9 @@
   pointer-events: none;
 }
 
-.modal-no-trailer {
+.modal-no-trailer,
+.loader-wrapper,
+.modal-trailer {
   position: relative;
   top: 50%;
   left: 50%;
@@ -35,16 +37,31 @@
   transform: translate(-50%, -50%) scale(0.9);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  &.modal-trailer {
+    padding: 0;
+    overflow: hidden;
+  }
+
   @include tablet {
     padding: 44px;
     width: 609px;
     height: 400px;
+
+    &.modal-trailer {
+      padding: 0;
+      overflow: hidden;
+    }
   }
 
   @include desktop {
     padding: 50px;
     width: 700px;
     height: 400px;
+
+    &.modal-trailer {
+      padding: 0;
+      overflow: hidden;
+    }
   }
 }
 
@@ -141,40 +158,14 @@
   }
 }
 
-.modal-trailer {
-  position: relative;
-  top: 0%;
-  left: 50%;
-
-  padding: 10px;
-  width: 280px;
-  height: 289px;
-
-  border-radius: 10px;
-  background-color: getColor('backgroundPrimary');
-  box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
-  border-radius: 20px;
-  z-index: 3000000000000;
-
-  transform: translate(-50%, -50%) scale(0.9);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  @include tablet {
-    padding: 15px;
-    width: 609px;
-    height: 400px;
-  }
-
-  @include desktop {
-    padding: 20px;
-    width: 700px;
-    height: 400px;
-  }
-}
-
 .modal-trailer-light {
   background-color: getColor('primary');
 }
+
+.hidden {
+  display: none;
+}
+
 .noScroll {
   overflow: hidden;
 }
