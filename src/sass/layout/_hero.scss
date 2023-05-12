@@ -118,7 +118,14 @@
 .hero__rating{
   margin-left: 20px;
   margin-bottom: 20px;
-
+  background: -webkit-gradient(linear,
+        left top,
+        left bottom,
+        from(#f84119),
+        to(#ffc226));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
   @include desktop {
       margin-left: 124px;
       margin-bottom: 28px;

@@ -12,7 +12,7 @@
     menu.classList.toggle('visually-hidden');
   }
   
-})();
+});
 
 // ---------------------------------
 

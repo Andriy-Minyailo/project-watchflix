@@ -13,7 +13,7 @@ async function ontrendingWeek() {
         const genres = await requestGenre();
         const responseWeek = await requestServer.trendingWeek();
         const { results } = responseWeek.data;
-        // console.log(results);
+       
         // const test = results.slice(0, 3);
         const markupCard = markup(results);
 

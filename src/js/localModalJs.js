@@ -24,7 +24,7 @@ refs.card.addEventListener('click', onLoadModal);
 
 function onLoadModal(event) {
     const { id } = event.target.offsetParent;
-    // console.log(event.target.offsetParent.innerHTML);
+    
     if (!id) { return };
     const idNum = Number(id);
     stateButton.localMarkup = {
@@ -38,29 +38,27 @@ function onLoadModal(event) {
 
 function checkFilmLocalStorage(idFilm) {
     const currentState = getMovieList(KEY_MOVIE_LIST);
-    console.log(currentState);
+
     if (!currentState) {
         // const filmIndex = currentState.findIndex(obj => obj.id === Number(id));
         refs.btnModalInfo.textContent = stateButton.addText;
         stateButton.currentStateButton = true;
-        // console.log(filmIndex);
-        // console.log(stateButton.addText);
+
         return;
     }
     // const [idLocalArray] = Object.keys(currentState);
      filmIndex = currentState.findIndex(obj => obj.id === idFilm);
    
-    // console.log(filmIndex);
+    
         if (filmIndex !== -1) {
         refs.btnModalInfo.textContent = stateButton.removeText;
         stateButton.currentStateButton = false;
        
-        console.log(stateButton.removeText);
+       
         } else {
         refs.btnModalInfo.textContent = stateButton.addText;
         stateButton.currentStateButton = true;
-        // console.log(filmIndex);
-        // console.log(stateButton.addText); 
+      
   }
     }
 
@@ -68,17 +66,17 @@ refs.btnModalInfo.addEventListener('click', onLoadLocalStorage);
 
 function onLoadLocalStorage(event) {
    
-    console.log(stateButton.currentStateButton);
+   
     if (stateButton.currentStateButton) {
         loadMoveList(stateButton.localMarkup);
         stateButton.currentStateButton = false;
         refs.btnModalInfo.textContent = stateButton.removeText;
-        console.log('add');
+       
     } else {
         deleteLocalFilm(filmIndex);
         stateButton.currentStateButton = true;
         refs.btnModalInfo.textContent = stateButton.addText;
-        console.log('remove');
+        
         checkLocalStorage(KEY_MOVIE_LIST);
     }
 }

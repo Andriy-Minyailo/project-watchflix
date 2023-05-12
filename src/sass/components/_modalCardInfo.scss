@@ -104,6 +104,7 @@ transition: 0.3s all;
  @media (max-width: 321px) {
   margin-bottom: -20px;
  }
+ 
 }
 
 .modal-card-info {
@@ -462,4 +463,14 @@ body.lock {
 }
 .modal__card-info-modal {
   box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
+  position: absolute;
+    top: 2px;
+    // width: 320px;
+    // left: 50%;
+    transform:  scale(0.9);
+@include tablet {
+  position: relative;
+    top: 0;
+  }
+
 }
