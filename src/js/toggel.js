@@ -49,6 +49,28 @@ if (isLight === 'true') {
   footerLinks.forEach((link) => {
     link.classList.add('light');
   });
+
+  // Добавляем классы к переключению на светлую тему
+  document.querySelector('.popup__content').classList.add('light');
+  document.querySelector('.modal__info').classList.add('light');
+  document.querySelector('.text-left').classList.add('light');
+  document.querySelector('.add-to-my-library-black-btn-dark-theme').classList.add('light');
+  document.querySelector('.modal-info__about').classList.add('light');
+  
+  const modalInfoLeftTextPopoparity = document.querySelectorAll('.modal-info-left__text-popoparity');
+  modalInfoLeftTextPopoparity.forEach((element) => {
+    element.classList.add('light');
+  });
+
+  const modalInfoLeftTextGenre = document.querySelectorAll('.modal-info-left__text-genre');
+  modalInfoLeftTextGenre.forEach((element) => {
+    element.classList.add('light');
+  });
+
+  const modalInfoAboutTextTitleAbout = document.querySelectorAll('.modal-info-about__text-title-about');
+  modalInfoAboutTextTitleAbout.forEach((element) => {
+    element.classList.add('light');
+  });
 }
 
 LightSwitcher.onclick = function () {
@@ -77,10 +99,31 @@ LightSwitcher.onclick = function () {
     link.classList.toggle('light');
   });
 
-  isLight = document.body.classList.contains('light');
-  localStorage.setItem('isLight', isLight);
-};
+  // Также добавляем классы к переключению на светлую тему
+  document.querySelector('.popup__content').classList.toggle('light');
+  document.querySelector('.modal__info').classList.toggle('light');
+  document.querySelector('.text-left').classList.toggle('light');
+  document.querySelector('.add-to-my-library-black-btn-dark-theme').classList.toggle('light');
+  document.querySelector('.modal-info__about').classList.toggle('light');
+  
+  const modalInfoLeftTextPopoparity = document.querySelectorAll('.modal-info-left__text-popoparity');
+modalInfoLeftTextPopoparity.forEach((element) => {
+  element.classList.toggle('light');
+});
 
+const modalInfoLeftTextGenre = document.querySelectorAll('.modal-info-left__text-genre');
+modalInfoLeftTextGenre.forEach((element) => {
+  element.classList.toggle('light');
+});
+
+const modalInfoAboutTextTitleAbout = document.querySelectorAll('.modal-info-about__text-title-about');
+modalInfoAboutTextTitleAbout.forEach((element) => {
+  element.classList.toggle('light');
+});
+
+isLight = document.body.classList.contains('light');
+localStorage.setItem('isLight', isLight);
+};
 
 //* C U R R E N T   P A G E
 

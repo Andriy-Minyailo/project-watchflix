@@ -282,7 +282,12 @@ body {
 
 
 .header-link.light {
-  color:#595959;
+  color: #595959;
+
+  :hover {
+    transition: color 0.2s ease;
+    color: #F87719;
+  }
 }
 
 
@@ -298,7 +303,14 @@ body {
   color: #595959;
 }
 
+.text-left.light {
+  color: #111;
+}
+
+.modal-info-vote-right__text-slesh {
+  color: #B7B7B7;
+}
 // curent
 .current a {
-  color: #F87719;
+  color: #F87719 !important;
 }
