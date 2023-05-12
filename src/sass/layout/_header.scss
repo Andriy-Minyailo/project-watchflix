@@ -115,7 +115,7 @@
   width: 8px;
   height: 8px;
   fill: transparent;
-  transition: .7s;
+  transition: .3s;
   @include tablet {
     width: 10px;
     height: 10px;
@@ -141,7 +141,7 @@
 }
 
 .switcher__ball {
-  transition: all .7s;
+  transition: all .3s;
   position: absolute;
   left: 24px;
   width: 12px;
